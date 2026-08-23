@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZARCH — Office</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="page-about">
+  <header class="site-header overlay-header">
+    <a class="brand" href="index.html" aria-label="ZARCH home">
+      <span class="brand-mark" aria-hidden="true">ZA</span>
+      <span class="brand-text">ZARCH<span>01</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Menu</span>
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="cost.html">Projects cost</a>
+      <a href="projects.html">Projects</a>
+      <a class="is-active" href="about.html">Office</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="about-hero">
+      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=80" alt="Warm-lit modern facade at dusk">
+      <a class="hero-cta" href="projects.html">Projects</a>
+    </section>
+
+    <div class="about-scene">
+      <article class="about-sheet">
+        <p class="sheet-label">ABOUT ZARCH</p>
+        <h1>ABOUT ZARCH / 01 ARCHITECTS</h1>
+
+        <div class="about-intro">
+          <div></div>
+          <div>
+            <p>ZARCH 01 Architects is an independent studio working across architecture, interiors, landscape and visualization. We treat every commission as a long conversation between place, programme and the people who will inhabit the work.</p>
+            <p>From civic buildings to private houses, the office looks for a clear idea that can survive construction, climate and time. Drawings, models and images are tools — the project itself is the beginning of a building’s life.</p>
+          </div>
+        </div>
+
+        <div class="about-fields">
+          <figure>
+            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="High-rise architecture">
+            <figcaption>Architecture</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Masterplan courtyard">
+            <figcaption>Masterplan</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Sustainable interior light">
+            <figcaption>Sustainable</figcaption>
+          </figure>
+          <figure>
+            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80" alt="Architectural visualization">
+            <figcaption>Visualization</figcaption>
+          </figure>
+        </div>
+
+        <section class="about-block">
+          <h2>Architecture with an idea</h2>
+          <p>We start from a single, readable concept and test it against structure, light and use. The result should be specific to its site, not a style applied from elsewhere.</p>
+        </section>
+
+        <section class="about-block" id="team">
+          <h2>Project — is just the beginning</h2>
+          <p>Delivery does not end at the last drawing. We stay with the client through construction and the first years of occupation, so the building can keep the idea that made it.</p>
+        </section>
+
+        <section class="slogan">
+          <p class="slogan-line">BUILT TO LAST.<br>DESIGNED TO MATTER.</p>
+          <p class="slogan-sub">THE SLOGAN OF OUR COMPANY</p>
+          <span class="brand-mark large">ZA</span>
+        </section>
+
+        <footer class="sheet-footer" id="contact">
+          <div class="footer-cta">
+            <a class="brand footer-brand" href="index.html" aria-label="ZARCH">
+              <span class="brand-mark" aria-hidden="true">ZA</span>
+            </a>
+            <h2>Ready to work with us?</h2>
+            <button class="btn dark" type="button" data-open-start>CONTACT US NOW</button>
+          </div>
+          <div class="footer-links compact">
+            <div>
+              <h3>Visit Us</h3>
+              <div class="pills">
+                <a href="#">Instagram</a>
+                <a href="#">LinkedIn</a>
+              </div>
+            </div>
+            <div>
+              <h3>Work</h3>
+              <div class="pills">
+                <a href="projects.html">Projects</a>
+                <a href="cost.html">Cost</a>
+              </div>
+            </div>
+            <div>
+              <h3>Newsletter</h3>
+              <form class="newsletter">
+                <label class="sr-only" for="news-email">Email</label>
+                <input id="news-email" type="email" placeholder="email" required>
+                <button type="submit">Send</button>
+              </form>
+            </div>
+          </div>
+        </footer>
+      </article>
+    </div>
+  </main>
+
+  <div class="modal" id="start-modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="start-card" role="dialog" aria-modal="true" aria-labelledby="start-title">
+      <header class="card-top">
+        <p><span class="brand-mark tiny">ZA</span> Your dream project start here</p>
+        <button class="text-link" type="button" data-close-modal>Close project</button>
+      </header>
+      <div class="start-grid">
+        <div>
+          <h2 id="start-title">Answer the questions to have a free architect consultation</h2>
+          <p class="offer">Special offer from ZARCH</p>
+          <a class="btn" href="cost.html">Let's start the project !</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="Geometric concrete facade">
+      </div>
+    </article>
+  </div>
+</body>
+</html>

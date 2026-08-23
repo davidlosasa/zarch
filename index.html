@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ZARCH 01 Architects — architecture, interiors and landscapes designed to last.">
+  <title>ZARCH — Architecture Studio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ZARCH home">
+      <span class="brand-mark" aria-hidden="true">ZA</span>
+      <span class="brand-text">ZARCH<span>01</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Menu</span>
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <a class="is-active" href="index.html">Home</a>
+      <a href="cost.html">Projects cost</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">Office</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" aria-label="Featured architecture">
+      <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=2400&q=80" alt="Angular glass tower photographed from below">
+    </section>
+
+    <section class="featured wrap">
+      <div class="section-heading">
+        <h1>Featured Projects</h1>
+        <a href="projects.html">all work</a>
+      </div>
+
+      <div class="mosaic mosaic-7">
+        <a class="tile" href="projects.html#quzhou">
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80" alt="Concrete civic building at dusk">
+          <span>Project 01</span>
+        </a>
+        <a class="tile" href="projects.html#atrium">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80" alt="Curved glass courtyard">
+          <span>Project 02</span>
+        </a>
+        <a class="tile" href="projects.html#tower">
+          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1000&q=80" alt="Blue glass skyscraper">
+          <span>Project 03</span>
+        </a>
+        <a class="tile" href="projects.html#lane">
+          <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80" alt="Street canyon looking upward">
+          <span>Project 04</span>
+        </a>
+        <a class="tile" href="projects.html#facet">
+          <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80" alt="Sharp glass corner">
+          <span>Project 05</span>
+        </a>
+        <a class="tile" href="projects.html#arc">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80" alt="Sweeping glazed facade">
+          <span>Project 06</span>
+        </a>
+        <a class="tile" href="projects.html#brick">
+          <img src="https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=900&q=80" alt="Brick residential facade">
+          <span>Project 07</span>
+        </a>
+      </div>
+      <a class="center-link" href="projects.html">all work</a>
+    </section>
+
+    <section class="statement wrap">
+      <h2>WE DESIGN<br><span>ALL OVER THE WORLD</span></h2>
+      <p>We design meaningful spaces that inspire creativity, provoke thought, and connect people to their surroundings.</p>
+    </section>
+
+    <section class="fields wrap">
+      <h2>Our Work Field</h2>
+      <div class="field-grid">
+        <a href="projects.html?category=architecture">
+          <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="Geometric tower">
+          <span>Architecture</span>
+        </a>
+        <a href="projects.html?category=visualization">
+          <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80" alt="Glass visualization study">
+          <span>Visualization</span>
+        </a>
+        <a href="projects.html?category=interior">
+          <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Interior workspace">
+          <span>Interior Design</span>
+        </a>
+        <a href="projects.html?category=landscape">
+          <img src="https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=800&q=80" alt="Night-lit structure">
+          <span>Landscape</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="world-map" aria-label="Studios around the world">
+      <p class="map-label">WE DESIGN<br>ALL OVER THE WORLD</p>
+      <div class="map-canvas" aria-hidden="true"></div>
+      <ul class="cities">
+        <li class="city city-ny">NEW YORK</li>
+        <li class="city city-paris">PARIS</li>
+        <li class="city city-lef">LEFKOSA</li>
+        <li class="city city-dubai">DUBAI</li>
+        <li class="city city-kin">KINSHASA</li>
+        <li class="city city-lubu">LUBUMBASHI</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-cta">
+      <a class="brand footer-brand" href="index.html" aria-label="ZARCH">
+        <span class="brand-mark" aria-hidden="true">ZA</span>
+      </a>
+      <h2>Ready to work<br><span>With us?</span></h2>
+      <div class="footer-actions">
+        <a class="btn" href="cost.html">Stage</a>
+        <button class="btn" type="button" data-open-start>LET'S START YOUR DREAM PROJECT</button>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h3>Works</h3>
+        <div class="pills">
+          <a href="index.html">HOME</a>
+          <a href="projects.html">PROJECTS</a>
+        </div>
+      </div>
+      <div>
+        <h3>Works</h3>
+        <div class="pills">
+          <a href="about.html">ABOUT US</a>
+          <a href="about.html#team">OUR TEAM</a>
+          <a href="#contact">CONTACT US</a>
+        </div>
+      </div>
+      <div>
+        <h3>Zarch News</h3>
+        <form class="newsletter">
+          <label class="sr-only" for="news-email">Email</label>
+          <input id="news-email" type="email" name="email" placeholder="email" required>
+          <button type="submit">SIGN UP</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="start-modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="start-card" role="dialog" aria-modal="true" aria-labelledby="start-title">
+      <header class="card-top">
+        <p><span class="brand-mark tiny">ZA</span> Your dream project start here</p>
+        <button class="text-link" type="button" data-close-modal>Close project</button>
+      </header>
+      <div class="start-grid">
+        <div>
+          <h2 id="start-title">Answer the questions to have a free architect consultation</h2>
+          <p class="offer">Special offer from ZARCH</p>
+          <a class="btn" href="cost.html">Let's start the project !</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="Geometric concrete facade against a blue sky">
+      </div>
+    </article>
+  </div>
+</body>
+</html>

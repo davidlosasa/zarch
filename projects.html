@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ZARCH — Projects</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body class="page-projects">
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ZARCH home">
+      <span class="brand-mark" aria-hidden="true">ZA</span>
+      <span class="brand-text">ZARCH<span>01</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Menu</span>
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a href="cost.html">Projects cost</a>
+      <a class="is-active" href="projects.html">Projects</a>
+      <a href="about.html">Office</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="project-browser wrap">
+      <div class="filters" role="tablist" aria-label="Project categories">
+        <button class="filter is-active" type="button" data-filter="all">All</button>
+        <button class="filter" type="button" data-filter="architecture">Architecture</button>
+        <button class="filter" type="button" data-filter="interior">Interior Design</button>
+        <button class="filter" type="button" data-filter="shop">Shop Drawing</button>
+        <button class="filter" type="button" data-filter="visualization">Visualization</button>
+      </div>
+
+      <div class="mosaic mosaic-7 gallery">
+        <button class="tile" type="button" data-project="quzhou" data-category="architecture">
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80" alt="Quzhou Sports Park">
+          <span>Project 01</span>
+        </button>
+        <button class="tile" type="button" data-project="atrium" data-category="visualization">
+          <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80" alt="Atrium glass court">
+          <span>Project 02</span>
+        </button>
+        <button class="tile" type="button" data-project="tower" data-category="architecture">
+          <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1000&q=80" alt="Harbor tower">
+          <span>Project 03</span>
+        </button>
+        <button class="tile" type="button" data-project="lane" data-category="shop">
+          <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80" alt="Urban lane study">
+          <span>Project 04</span>
+        </button>
+        <button class="tile" type="button" data-project="facet" data-category="architecture">
+          <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80" alt="Faceted tower corner">
+          <span>Project 05</span>
+        </button>
+        <button class="tile" type="button" data-project="arc" data-category="visualization">
+          <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80" alt="Arc pavilion">
+          <span>Project 06</span>
+        </button>
+        <button class="tile" type="button" data-project="brick" data-category="interior">
+          <img src="https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=900&q=80" alt="Brick loft interiors">
+          <span>Project 07</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer footer-light" id="contact">
+    <div class="footer-cta">
+      <a class="brand footer-brand" href="index.html" aria-label="ZARCH">
+        <span class="brand-mark" aria-hidden="true">ZA</span>
+      </a>
+      <h2>Ready to work<br><span>With us?</span></h2>
+      <div class="footer-actions">
+        <a class="btn" href="cost.html">Stage</a>
+        <button class="btn" type="button" data-open-start>LET'S START YOUR DREAM PROJECT</button>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h3>Works</h3>
+        <div class="pills">
+          <a href="index.html">HOME</a>
+          <a href="projects.html">PROJECTS</a>
+        </div>
+      </div>
+      <div>
+        <h3>Works</h3>
+        <div class="pills">
+          <a href="about.html">ABOUT US</a>
+          <a href="about.html#team">OUR TEAM</a>
+          <a href="#contact">CONTACT US</a>
+        </div>
+      </div>
+      <div>
+        <h3>Zarch News</h3>
+        <form class="newsletter">
+          <label class="sr-only" for="news-email">Email</label>
+          <input id="news-email" type="email" placeholder="email" required>
+          <button type="submit">SIGN UP</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <div class="modal" id="project-modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="project-card-detail" role="dialog" aria-modal="true" aria-labelledby="project-title">
+      <header class="card-top">
+        <p><span class="brand-mark tiny">ZA</span> <span data-project-kicker>Quzhou Sports Park</span></p>
+        <button class="text-link" type="button" data-close-modal>Close project</button>
+      </header>
+      <div class="project-detail-grid">
+        <div>
+          <h2 id="project-title">Quzhou Sports Park</h2>
+          <ul class="meta">
+            <li data-project-location>Quzhou, China</li>
+            <li data-project-type>Sports Infrastructure</li>
+            <li data-project-years>2018-2026</li>
+          </ul>
+          <div class="body" data-project-body></div>
+          <a class="read-more" href="about.html">READ MORE</a>
+        </div>
+        <div class="project-photos">
+          <img data-project-img-1 alt="">
+          <img data-project-img-2 alt="">
+        </div>
+      </div>
+    </article>
+  </div>
+
+  <div class="modal" id="start-modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="start-card" role="dialog" aria-modal="true" aria-labelledby="start-title">
+      <header class="card-top">
+        <p><span class="brand-mark tiny">ZA</span> Your dream project start here</p>
+        <button class="text-link" type="button" data-close-modal>Close project</button>
+      </header>
+      <div class="start-grid">
+        <div>
+          <h2 id="start-title">Answer the questions to have a free architect consultation</h2>
+          <p class="offer">Special offer from ZARCH</p>
+          <a class="btn" href="cost.html">Let's start the project !</a>
+        </div>
+        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="Geometric concrete facade">
+      </div>
+    </article>
+  </div>
+</body>
+</html>
