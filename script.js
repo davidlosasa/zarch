@@ -9,7 +9,7 @@ const PROJECTS = {
       "The project is delivered in phases so the park can open while later venues continue. Structure, cladding and public rooms share one geometric language."
     ],
     img1: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80",
-    img2: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80"
+    img2: "https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=900&q=80"
   },
   atrium: {
     title: "Glass Atrium Court",
@@ -85,6 +85,33 @@ const PROJECTS = {
   }
 };
 
+const COST_CONTENT = {
+  1: {
+    title: 'Architecture and interior space design',
+    text: 'We prepare the concept and early spatial layout, including zoning, circulation, volumes, and daylight studies. The first stage turns the brief into a clear architectural direction.'
+  },
+  2: {
+    title: 'Schematic design',
+    text: 'We develop the primary massing and the main design decisions for the project, confirming the technical direction and the overall visual language before detailed development.'
+  },
+  3: {
+    title: 'Technical documentation',
+    text: 'This stage includes key construction drawings, material references, and coordinated dimensioned plans so the design can be reviewed and refined for implementation.'
+  },
+  4: {
+    title: 'Project delivery',
+    text: 'We support the final review, pricing, procurement and on-site coordination to keep the construction process aligned with the approved design and quality expectations.'
+  },
+  5: {
+    title: 'Interior concept development',
+    text: 'We refine the key zones, surfaces, lighting strategy and furniture layout to shape a coherent interior experience that matches the architecture.'
+  },
+  6: {
+    title: 'Construction support',
+    text: 'The final stage keeps the design intent intact through site checks, clarifications, and supplier coordination, so the built result remains faithful to the project vision.'
+  }
+};
+
 document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".main-nav");
@@ -94,18 +121,39 @@ document.addEventListener("DOMContentLoaded", () => {
   const startModal = document.getElementById("start-modal");
   const params = new URLSearchParams(window.location.search);
   const hash = window.location.hash.replace("#", "");
+  const stepButtons = document.querySelectorAll(".cost-step");
+  const costTitle = document.getElementById("cost-step-title");
+  const costText = document.getElementById("cost-step-text");
+  const costStepNumber = document.getElementById("cost-step-number");
+  const costBriefTitle = document.getElementById("cost-brief-title");
+  const costBriefText = document.getElementById("cost-brief-text");
+  let previousScrollY = 0;
+  let previousFocus = null;
 
   const openModal = (modal) => {
     if (!modal) return;
+    if (!document.body.classList.contains("modal-open")) {
+      previousScrollY = window.scrollY;
+      previousFocus = document.activeElement;
+      document.body.style.top = `-${previousScrollY}px`;
+      document.body.style.position = "fixed";
+      document.body.style.width = "100%";
+    }
     modal.hidden = false;
     document.body.classList.add("modal-open");
+    requestAnimationFrame(() => modal.querySelector(".text-link")?.focus());
   };
 
   const closeModals = () => {
     document.querySelectorAll(".modal").forEach((modal) => {
       modal.hidden = true;
     });
+    document.body.style.position = "";
+    document.body.style.top = "";
+    document.body.style.width = "";
     document.body.classList.remove("modal-open");
+    window.scrollTo(0, previousScrollY);
+    previousFocus?.focus();
   };
 
   const fillProject = (id) => {
@@ -119,12 +167,17 @@ document.addEventListener("DOMContentLoaded", () => {
     projectModal.querySelector("[data-project-body]").innerHTML = data.body
       .map((paragraph) => `<p>${paragraph}</p>`)
       .join("");
-    const img1 = projectModal.querySelector("[data-project-img-1]");
-    const img2 = projectModal.querySelector("[data-project-img-2]");
-    img1.src = data.img1;
-    img1.alt = data.title;
-    img2.src = data.img2;
-    img2.alt = `${data.title} detail`;
+    const gallery = projectModal.querySelector(".project-gallery");
+    const images = data.images || [data.img1, data.img2].filter(Boolean);
+    gallery.replaceChildren();
+    images.filter(Boolean).forEach((src, index) => {
+      const image = document.createElement("img");
+      image.src = src;
+      image.alt = index === 0 ? data.title : `${data.title} detail ${index + 1}`;
+      image.loading = index === 0 ? "eager" : "lazy";
+      gallery.append(image);
+    });
+    gallery.hidden = images.filter(Boolean).length === 0;
     openModal(projectModal);
   };
 
@@ -134,6 +187,35 @@ document.addEventListener("DOMContentLoaded", () => {
     });
     filters.forEach((filter) => {
       filter.classList.toggle("is-active", filter.dataset.filter === name);
+    });
+  };
+
+  const setCostStep = (step) => {
+    if (!costTitle || !costText) return;
+    const content = COST_CONTENT[step] || COST_CONTENT[1];
+    const dynamicSections = [
+      costTitle.closest(".cost-panel-copy"),
+      costBriefTitle?.closest(".brief-column")
+    ].filter(Boolean);
+    dynamicSections.forEach((section) => section.classList.add("is-changing"));
+    costTitle.textContent = content.title;
+    costText.textContent = content.text;
+    if (costBriefTitle) {
+      costBriefTitle.textContent = content.title.toUpperCase();
+    }
+    if (costBriefText) {
+      costBriefText.textContent = content.text;
+    }
+    if (costStepNumber) {
+      costStepNumber.textContent = step;
+    }
+    stepButtons.forEach((button) => {
+      const active = Number(button.dataset.step) === Number(step);
+      button.classList.toggle("is-active", active);
+      button.setAttribute("aria-pressed", String(active));
+    });
+    requestAnimationFrame(() => {
+      dynamicSections.forEach((section) => section.classList.remove("is-changing"));
     });
   };
 
@@ -157,6 +239,14 @@ document.addEventListener("DOMContentLoaded", () => {
     tile.addEventListener("click", () => fillProject(tile.dataset.project));
   });
 
+  if (stepButtons.length) {
+    const initialStep = document.querySelector(".cost-step.is-active")?.dataset.step || 1;
+    setCostStep(initialStep);
+    stepButtons.forEach((button) => {
+      button.addEventListener("click", () => setCostStep(button.dataset.step));
+    });
+  }
+
   if (hash && PROJECTS[hash]) fillProject(hash);
 
   document.querySelectorAll("[data-open-start]").forEach((button) => {
@@ -168,14 +258,33 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   document.addEventListener("keydown", (event) => {
-    if (event.key === "Escape") closeModals();
+    const openModalElement = document.querySelector(".modal:not([hidden])");
+    if (event.key === "Escape") {
+      closeModals();
+      return;
+    }
+    if (event.key !== "Tab" || !openModalElement) return;
+    const focusable = [...openModalElement.querySelectorAll("button, a, input, [tabindex]:not([tabindex='-1'])")]
+      .filter((element) => !element.hasAttribute("disabled"));
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (event.shiftKey && document.activeElement === first) {
+      event.preventDefault();
+      last.focus();
+    } else if (!event.shiftKey && document.activeElement === last) {
+      event.preventDefault();
+      first.focus();
+    }
   });
 
   document.querySelectorAll(".newsletter").forEach((form) => {
     form.addEventListener("submit", (event) => {
       event.preventDefault();
       const button = form.querySelector("button");
-      button.textContent = "THANK YOU";
+      if (button) {
+        button.textContent = "THANK YOU";
+      }
       form.reset();
     });
   });

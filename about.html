@@ -11,7 +11,7 @@
   <script src="script.js" defer></script>
 </head>
 <body class="page-about">
-  <header class="site-header overlay-header">
+  <header class="site-header">
     <a class="brand" href="index.html" aria-label="ZARCH home">
       <span class="brand-mark" aria-hidden="true">ZA</span>
       <span class="brand-text">ZARCH<span>01</span></span>
@@ -30,14 +30,15 @@
 
   <main>
     <section class="about-hero">
-      <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=2400&q=80" alt="Warm-lit modern facade at dusk">
-      <a class="hero-cta" href="projects.html">Projects</a>
+      <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2400&q=80" alt="Modern building facade viewed from below">
+      <a class="hero-cta" href="projects.html">About us</a>
     </section>
 
     <div class="about-scene">
       <article class="about-sheet">
         <p class="sheet-label">ABOUT ZARCH</p>
-        <h1>ABOUT ZARCH / 01 ARCHITECTS</h1>
+        <h1>ABOUT ZARCH</h1>
+        <h2 class="about-sheet-subtitle">01 ARCHITECTS</h2>
 
         <div class="about-intro">
           <div></div>
@@ -49,19 +50,19 @@
 
         <div class="about-fields">
           <figure>
-            <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=800&q=80" alt="High-rise architecture">
+            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80" alt="Urban architecture">
             <figcaption>Architecture</figcaption>
           </figure>
           <figure>
-            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Masterplan courtyard">
-            <figcaption>Masterplan</figcaption>
+            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800&q=80" alt="Interior design space">
+            <figcaption>Interior design</figcaption>
           </figure>
           <figure>
-            <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=800&q=80" alt="Sustainable interior light">
-            <figcaption>Sustainable</figcaption>
+            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=80" alt="Shop drawing facade">
+            <figcaption>Shop Drawing</figcaption>
           </figure>
           <figure>
-            <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=800&q=80" alt="Architectural visualization">
+            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Architectural visualization">
             <figcaption>Visualization</figcaption>
           </figure>
         </div>
@@ -81,43 +82,68 @@
           <p class="slogan-sub">THE SLOGAN OF OUR COMPANY</p>
           <span class="brand-mark large">ZA</span>
         </section>
-
-        <footer class="sheet-footer" id="contact">
-          <div class="footer-cta">
-            <a class="brand footer-brand" href="index.html" aria-label="ZARCH">
-              <span class="brand-mark" aria-hidden="true">ZA</span>
-            </a>
-            <h2>Ready to work with us?</h2>
-            <button class="btn dark" type="button" data-open-start>CONTACT US NOW</button>
-          </div>
-          <div class="footer-links compact">
-            <div>
-              <h3>Visit Us</h3>
-              <div class="pills">
-                <a href="#">Instagram</a>
-                <a href="#">LinkedIn</a>
-              </div>
-            </div>
-            <div>
-              <h3>Work</h3>
-              <div class="pills">
-                <a href="projects.html">Projects</a>
-                <a href="cost.html">Cost</a>
-              </div>
-            </div>
-            <div>
-              <h3>Newsletter</h3>
-              <form class="newsletter">
-                <label class="sr-only" for="news-email">Email</label>
-                <input id="news-email" type="email" placeholder="email" required>
-                <button type="submit">Send</button>
-              </form>
-            </div>
-          </div>
-        </footer>
       </article>
     </div>
+
   </main>
+
+  <footer class="site-footer footer-light" id="contact">
+    <div class="footer-cta">
+      <a class="brand footer-brand" href="index.html" aria-label="ZARCH">
+        <span class="brand-mark" aria-hidden="true">ZA</span>
+      </a>
+      <h2>Ready to work<br><span>With us?</span></h2>
+      <div class="footer-actions">
+        <a class="btn" href="cost.html">Stage</a>
+        <button class="btn" type="button" data-open-start>LET'S START YOUR DREAM PROJECT</button>
+      </div>
+    </div>
+    <div class="footer-links">
+      <div>
+        <h3>Works</h3>
+        <div class="pills">
+          <a href="index.html">HOME</a>
+          <a href="projects.html">PROJECTS</a>
+        </div>
+      </div>
+      <div>
+        <h3>Works</h3>
+        <div class="pills">
+          <a href="about.html">ABOUT US</a>
+          <a href="about.html#team">OUR TEAM</a>
+          <a href="#contact">CONTACT US</a>
+        </div>
+      </div>
+      <div>
+        <h3>Zarch News</h3>
+        <form class="newsletter">
+          <label class="sr-only" for="news-email">Email</label>
+          <input id="news-email" type="email" placeholder="email" required>
+          <button type="submit">SIGN UP</button>
+        </form>
+      </div>
+    </div>
+  </footer>
+
+  <section class="about-lower wrap" aria-labelledby="about-lower-title">
+    <h2 id="about-lower-title">About Us</h2>
+    <div class="about-lower-grid">
+      <div class="about-lower-brand">ZARCH<br><strong>01 Architects</strong></div>
+      <div class="about-lower-copy">
+        <h3>ARCHITECTURAL STUDIO ZARCH<br>01 Architects</h3>
+        <p>ZARCH 01 Architects is an independent studio working across architecture, interiors, landscape and visualization. We treat every commission as a long conversation between place, programme and the people who will inhabit the work.</p>
+        <h3>Architecture with an idea</h3>
+        <p>We start from a single, readable concept and test it against structure, light and use.</p>
+        <h3>Project — is just the beginning</h3>
+        <p>Delivery does not end at the last drawing. We stay with the client through construction and the first years of occupation.</p>
+      </div>
+      <div class="about-lower-slogan">
+        <p>BUILT TO LAST. DESIGNED TO MATTER</p>
+        <span>THE SLOGAN OF OUR COMPANY</span>
+        <span class="brand-mark large">ZA</span>
+      </div>
+    </div>
+  </section>
 
   <div class="modal" id="start-modal" hidden>
     <div class="modal-backdrop" data-close-modal></div>

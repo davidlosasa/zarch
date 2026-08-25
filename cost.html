@@ -29,23 +29,25 @@
   </header>
 
   <main class="cost-page wrap">
-    <section class="split hero-copy">
-      <h1>DEVELOPMENT<br>INDIVIDUAL PROJECT</h1>
-      <div>
-        <h2>Architectural design and interior space design</h2>
-        <p>We prepared a transparent online calculator so you can estimate the cost of architectural design and interior space design before the first meeting. The preliminary figure is based on typology, area and the depth of documentation you need.</p>
-        <p>Use it as a working budget for a house, an apartment, or a mixed-use interior. The result is not a contract — it is a clear starting point for a conversation with the studio.</p>
-        <button class="wide-btn" type="button" data-open-start>FIND OUT THE COST</button>
+    <section class="cost-intro">
+      <div class="cost-intro-heading">
+        <h1>DEVELOPMENT<br><span>INDIVIDUAL PROJECT</span></h1>
       </div>
+      <section class="cost-panel" aria-live="polite">
+        <div class="cost-panel-copy">
+          <h2 id="cost-step-title">Architecture and interior space design</h2>
+          <p id="cost-step-text">We prepare the concept and early spatial layout, including zoning, circulation, volumes, and daylight studies. The first stage turns the brief into a clear architectural direction.</p>
+        </div>
+      </section>
     </section>
 
-    <section class="split">
-      <div>
+    <section class="cost-stages">
+      <div class="cost-summary-copy">
         <p class="kicker">STAGES</p>
-        <h2>PERFORMING WORK</h2>
+        <h3>PERFORMING WORK</h3>
         <p class="sub">DESIGN STAGES</p>
       </div>
-      <div>
+      <div class="cost-summary-body">
         <div class="accordion">
           <button type="button" aria-expanded="true">What Does Our Design Process Look Like?</button>
           <button type="button" aria-expanded="false">How Do We Coordinate With Contractors?</button>
@@ -56,22 +58,31 @@
       </div>
     </section>
 
-    <section class="stage-strip" aria-label="Design stages">
-      <div class="stage-box"><span class="brand-mark">ZA</span></div>
-      <div class="stage-box"></div>
-      <div class="stage-box"></div>
-      <div class="stage-box"></div>
-      <button class="wide-btn strip-cta" type="button" data-open-start>FIND OUT THE COST</button>
+    <section class="stage-strip" aria-label="Project stages">
+      <div class="stage-box stage-logo"><span class="brand-mark" aria-hidden="true">ZA</span></div>
+      <div class="stage-group">
+        <button class="cost-step is-active" type="button" data-step="1" aria-pressed="true">1</button>
+        <button class="cost-step" type="button" data-step="2" aria-pressed="false">2</button>
+      </div>
+      <div class="stage-group">
+        <button class="cost-step" type="button" data-step="3" aria-pressed="false">3</button>
+        <button class="cost-step" type="button" data-step="4" aria-pressed="false">4</button>
+      </div>
+      <div class="stage-group">
+        <button class="cost-step" type="button" data-step="5" aria-pressed="false">5</button>
+        <button class="cost-step" type="button" data-step="6" aria-pressed="false">6</button>
+      </div>
+      <button class="cost-cta alt" type="button" data-open-start>FIND OUT THE COST</button>
     </section>
 
-    <section class="split dating">
-      <div>
+    <section class="cost-brief">
+      <div class="brief-column">
         <p class="kicker">DATING</p>
-        <h2>PRE-PROJECT PREPARATION</h2>
-        <p class="lede">Represents an introduction with the client and identification of their initial request.</p>
+        <h3 id="cost-brief-title">PRE-PROJECT PREPARATION</h3>
+        <p class="lede" id="cost-brief-text">Represents an introduction with the client and identification of their initial request.</p>
         <p class="sub">BRIEF:</p>
       </div>
-      <div>
+      <div class="brief-column">
         <p class="note">implementation period 2–5 days</p>
         <ol class="brief-list">
           <li>
@@ -85,13 +96,12 @@
             <p>The briefing session turns that conversation into a written document: rooms, atmospheres, materials, and a first cost range. You receive a clear brief before schematic design begins.</p>
           </li>
         </ol>
-        <button class="wide-btn" type="button" data-open-start>FIND OUT THE COST</button>
       </div>
     </section>
 
-    <section class="split">
+    <section class="cost-foot">
       <div>
-        <h2>ARCHITECTURAL<br>DESIGN DOCUMENTATION</h2>
+        <h3>ARCHITECTURAL<br>DESIGN DOCUMENTATION</h3>
         <p class="sub">CALCULATION COST</p>
       </div>
       <div class="stack-btns">
@@ -100,12 +110,12 @@
       </div>
     </section>
 
-    <section class="split assessment">
-      <h2>PRELIMINARY ASSESSMENT OF THE COST OF DESIGNING A HOUSE AND DEVELOPING A DESIGN PROJECT FOR THE INTERIOR OF AN APARTMENT</h2>
+    <section class="assessment">
+      <h2>PRELIMINARY ASSESSMENT OF THE COST<br>OF DESIGNING A HOUSE AND DEVELOPING<br>A DESIGN PROJECT FOR THE INTERIOR OF<br>AN APARTMENT</h2>
       <div>
-        <p>The calculator considers the type of object, the area, the composition of the team and the set of drawings required for construction. Interior design can be estimated together with architecture or as a separate package.</p>
-        <p>A preliminary figure helps you plan financing early. It is updated after the brief, when the real constraints of the site and the programme are known.</p>
-        <p>If you already have a plot or an apartment, send the area and a short description — we will return a first range and propose a meeting to start the individual project.</p>
+        <p>The calculation considers several key factors, including the type of project, the total area, and the scope of the work. This allows clients to get a clear preliminary estimate of the design and documentation costs for their project.</p>
+        <p>We understand that budgeting is an essential part of any construction or renovation project. Our Design Cost Calculator is designed to give you a quick and reliable estimate based on the specific characteristics of your project.</p>
+        <p>Simply enter your project details to discover an estimated design cost and take the first step toward planning your project with confidence.</p>
       </div>
     </section>
   </main>
