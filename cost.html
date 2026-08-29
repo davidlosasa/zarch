@@ -1,179 +1,521 @@
 <!doctype html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZARCH — Projects cost</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zarch — Development Individual Project</title>
+  <link rel="stylesheet" href="projectcost.css" />
   <script src="script.js" defer></script>
 </head>
-<body class="page-cost">
-  <header class="site-header">
-    <a class="brand" href="index.html" aria-label="ZARCH home">
-      <span class="brand-mark" aria-hidden="true">ZA</span>
-      <span class="brand-text">ZARCH<span>01</span></span>
-    </a>
-    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-      <span class="sr-only">Menu</span>
-      <span></span><span></span>
-    </button>
-    <nav class="main-nav" id="primary-nav" aria-label="Primary">
-      <a href="index.html">Home</a>
-      <a class="is-active" href="cost.html">Projects cost</a>
-      <a href="projects.html">Projects</a>
-      <a href="about.html">Office</a>
-    </nav>
-  </header>
 
-  <main class="cost-page wrap">
-    <section class="cost-intro">
-      <div class="cost-intro-heading">
-        <h1>DEVELOPMENT<br><span>INDIVIDUAL PROJECT</span></h1>
+<body class="page-cost">
+  <!--
+    CSS-only navigation:
+    clicking a stage changes the checked radio button.
+    No JavaScript is used.
+  -->
+  <input class="page-state" type="radio" name="project-stage" id="project-cost" checked>
+  <input class="page-state" type="radio" name="project-stage" id="stage-1">
+  <input class="page-state" type="radio" name="project-stage" id="stage-2">
+  <input class="page-state" type="radio" name="project-stage" id="stage-3">
+  <input class="page-state" type="radio" name="project-stage" id="stage-4">
+  <input class="page-state" type="radio" name="project-stage" id="stage-5">
+  <input class="page-state" type="radio" name="project-stage" id="stage-6">
+
+  <div class="site-page">
+
+    <section class="hero wrap">
+      <header class="site-header">
+        <a class="brand" href="index.html" aria-label="ZARCH home">
+          <span class="brand-mark" aria-hidden="true">ZA</span>
+          <span class="brand-text">ZARCH<span>01</span></span>
+        </a>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+          <span class="sr-only">Menu</span>
+          <span></span><span></span>
+        </button>
+        <nav class="main-nav" id="primary-nav" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a class="is-active" href="cost.html">Projects cost</a>
+          <a href="projects.html">Projects</a>
+          <a href="about.html">Office</a>
+        </nav>
+      </header>
+
+      <div class="hero-grid">
+        <div class="hero-title">
+          <h1>DEVELOPMENT<br><span>INDIVIDUAL PROJECT</span></h1>
+        </div>
+
+        <div class="hero-copy">
+          <h2>Architectural design and interior<br>space design</h2>
+          <p>
+            We offer a simple and user-friendly online design cost calculator that enables you to quickly
+            estimate the cost of your architectural or interior design project based on your specific requirements.
+          </p>
+          <p>
+            With just a few inputs, you can receive an instant preliminary estimate for your home or interior
+            design project—eliminating the need for initial consultations or lengthy discussions. This gives you
+            a clear understanding of your project's potential cost, allowing you to plan your budget with confidence
+            before moving forward.
+          </p>
+          <label class="wide-button" for="project-cost">FIND OUT THE COST</label>
+        </div>
       </div>
-      <section class="cost-panel" aria-live="polite">
-        <div class="cost-panel-copy">
-          <h2 id="cost-step-title">Architecture and interior space design</h2>
-          <p id="cost-step-text">We prepare the concept and early spatial layout, including zoning, circulation, volumes, and daylight studies. The first stage turns the brief into a clear architectural direction.</p>
+    </section>
+
+    <main class="project-area" id="stages">
+      <section class="stages-intro wrap section-line-top">
+        <div>
+          <h2>STAGES<br><span>PERFORMING WORK</span></h2>
+          <p class="eyebrow-dark">DESIGN STAGES</p>
+        </div>
+        <div class="stage-intro-copy">
+          <p>What Does Our Design Process Look Like?<br>
+            What are the key stages of the project?<br>
+            How long does the design process take?<br>
+            What can you expect to receive upon completion?</p>
+          <p>With years of experience delivering successful architectural and interior design projects, we have
+            developed a clear and structured workflow that ensures transparency, efficiency, and exceptional results.
+          </p>
         </div>
       </section>
-    </section>
 
-    <section class="cost-stages">
-      <div class="cost-summary-copy">
-        <p class="kicker">STAGES</p>
-        <h3>PERFORMING WORK</h3>
-        <p class="sub">DESIGN STAGES</p>
-      </div>
-      <div class="cost-summary-body">
-        <div class="accordion">
-          <button type="button" aria-expanded="true">What Does Our Design Process Look Like?</button>
-          <button type="button" aria-expanded="false">How Do We Coordinate With Contractors?</button>
-          <button type="button" aria-expanded="false">Which Documents Do You Receive?</button>
-          <button type="button" aria-expanded="false">How Is the Budget Controlled?</button>
+      <section class="stage-switcher wrap">
+        <div class="switch-logo"><span class="brand-mark large" aria-hidden="true">ZA</span></div>
+        <label class="stage-tab tab-1" for="stage-1"><span>1</span><u>SKETCH<br>PROJECT</u></label>
+        <label class="stage-tab tab-2" for="stage-2"><span>2</span><u>CONSTRUCTION<br>PROJECT</u></label>
+        <label class="stage-tab tab-3" for="stage-3"><span>3</span><u>ENGINEERING<br>NETWORKS</u></label>
+        <label class="stage-tab tab-4" for="stage-4"><span>4</span><u>CONSTRUCTION<br>FACILITY</u></label>
+        <label class="stage-tab tab-5" for="stage-5"><span>5</span><u>INTERIOR<br>DESIGN</u></label>
+        <label class="stage-tab tab-6" for="stage-6"><span>6</span><u>INTERIOR<br>IMPLEMENTATION</u></label>
+      </section>
+
+      <section class="content-pane content-cost wrap section-line-top">
+        <div class="pane-heading with-period">
+          <div>
+            <div class="stage-kicker">DATING</div>
+            <h2>PRE-PROJECT PREPARATION</h2>
+            <p>Represents an introduction with the client and identification of their initial request.</p>
+            <h3>BRIEF:</h3>
+          </div>
+          <div class="period"><small>Implementation period</small><strong>2-5 DAYS</strong></div>
         </div>
-        <p>Each stage is sequential, documented and shared with the client. We keep the workflow transparent so decisions stay on time, and the project moves from brief to built work without hidden steps.</p>
-      </div>
-    </section>
 
-    <section class="stage-strip" aria-label="Project stages">
-      <div class="stage-box stage-logo"><span class="brand-mark" aria-hidden="true">ZA</span></div>
-      <div class="stage-group">
-        <button class="cost-step is-active" type="button" data-step="1" aria-pressed="true">1</button>
-        <button class="cost-step" type="button" data-step="2" aria-pressed="false">2</button>
-      </div>
-      <div class="stage-group">
-        <button class="cost-step" type="button" data-step="3" aria-pressed="false">3</button>
-        <button class="cost-step" type="button" data-step="4" aria-pressed="false">4</button>
-      </div>
-      <div class="stage-group">
-        <button class="cost-step" type="button" data-step="5" aria-pressed="false">5</button>
-        <button class="cost-step" type="button" data-step="6" aria-pressed="false">6</button>
-      </div>
-      <button class="cost-cta alt" type="button" data-open-start>FIND OUT THE COST</button>
-    </section>
+        <div class="brief-grid">
+          <div class="brief-icon icon-people" aria-hidden="true"><span></span></div>
+          <div class="step-number">1</div>
+          <div class="brief-text">
+            <p>We arrange an in-person or online meeting with our lead architect. During this conversation, we discuss
+              your vision for the project, your design preferences, lifestyle needs, expected budget, and overall
+              expectations.</p>
+            <p>We also welcome inspiration from Pinterest or any other platform. If you've saved images, ideas, or
+              details you like, they help us better understand your preferred style and define the overall design
+              direction.</p>
+            <p>At this stage, we collect all the necessary project information, including the site location, topography,
+              plot dimensions, existing structures, and any other technical details required to begin the design
+              process.</p>
+          </div>
 
-    <section class="cost-brief">
-      <div class="brief-column">
-        <p class="kicker">DATING</p>
-        <h3 id="cost-brief-title">PRE-PROJECT PREPARATION</h3>
-        <p class="lede" id="cost-brief-text">Represents an introduction with the client and identification of their initial request.</p>
-        <p class="sub">BRIEF:</p>
-      </div>
-      <div class="brief-column">
-        <p class="note">implementation period 2–5 days</p>
-        <ol class="brief-list">
-          <li>
-            <span class="thumb" aria-hidden="true"></span>
-            <span class="num">1</span>
-            <p>We meet in the studio or on site to understand the plot, the existing building and the way you live. Together we fix the programme, the priorities and the constraints that will guide the first sketches.</p>
-          </li>
-          <li>
-            <span class="thumb" aria-hidden="true"></span>
-            <span class="num">2</span>
-            <p>The briefing session turns that conversation into a written document: rooms, atmospheres, materials, and a first cost range. You receive a clear brief before schematic design begins.</p>
-          </li>
-        </ol>
-      </div>
-    </section>
+          <div class="brief-icon icon-chat" aria-hidden="true"><span>A</span><b>Q</b></div>
+          <div class="step-number">2</div>
+          <div class="brief-text">
+            <p>Next, together with our lead architect, you complete a project brief—a carefully prepared brief designed
+              to gather all the information needed to begin the design process. If anything was overlooked during the
+              initial meeting, the brief helps organize your ideas, capture every important detail, and provide our
+              architects with a clear design direction.</p>
+            <p>Based on your requirements and the completed brief, we prepare a tailored project proposal and finalize
+              the agreement. Once everything is approved, we proceed to the next stage—the development of the
+              preliminary design.</p>
+            <a class="wide-button" href="#">CHECK OUT BRIEF</a>
+          </div>
+        </div>
+      </section>
 
-    <section class="cost-foot">
-      <div>
-        <h3>ARCHITECTURAL<br>DESIGN DOCUMENTATION</h3>
-        <p class="sub">CALCULATION COST</p>
-      </div>
-      <div class="stack-btns">
-        <button class="wide-btn" type="button" data-open-start>FIND OUT THE COST</button>
-        <button class="wide-btn" type="button" data-open-start>FIND OUT THE COST</button>
-      </div>
-    </section>
+      <section class="content-pane content-stage-1 wrap section-line-top">
+        <div class="pane-heading with-period">
+          <div>
+            <div class="stage-kicker">STAGE 1</div>
+            <h2>ARCHITECTURAL AND PLANNING CONCEPT<br>(DRAFT)</h2>
+            <p>The main objective of this stage is to combine all your requirements identified through the brief with
+              the initial site information: dimensions, area, terrain, orientation, sunlight exposure, and other key
+              factors. As a result, we create a three-dimensional model of the future home, including its layout,
+              technical solutions, and overall visual concept.</p>
+            <h3>OPERATING ALGORITHM:</h3>
+          </div>
+          <div class="period"><small>Implementation period</small><strong>3 MONTHS</strong></div>
+        </div>
 
-    <section class="assessment">
-      <h2>PRELIMINARY ASSESSMENT OF THE COST<br>OF DESIGNING A HOUSE AND DEVELOPING<br>A DESIGN PROJECT FOR THE INTERIOR OF<br>AN APARTMENT</h2>
-      <div>
-        <p>The calculation considers several key factors, including the type of project, the total area, and the scope of the work. This allows clients to get a clear preliminary estimate of the design and documentation costs for their project.</p>
-        <p>We understand that budgeting is an essential part of any construction or renovation project. Our Design Cost Calculator is designed to give you a quick and reliable estimate based on the specific characteristics of your project.</p>
-        <p>Simply enter your project details to discover an estimated design cost and take the first step toward planning your project with confidence.</p>
-      </div>
-    </section>
-  </main>
+        <div class="timeline">
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">1</div>
+            <div>
+              <h4>Idea</h4>
+              <p>Based on the brief, we create the first concept sketch of the house, which is then refined and
+                developed through multiple iterations. We organize weekly meetings or calls to review the current design
+                version with you, discuss adjustments, and gradually bring the project closer to its final vision.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">2</div>
+            <div>
+              <h4>Functional zoning</h4>
+              <p>Once we have the first approved concept for the house, we begin developing the functional layout and
+                positioning the building on the site. At this stage, we carefully analyze the relationship between all
+                spaces and organize circulation so the house works practically and comfortably.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">3</div>
+            <div>
+              <h4>Interactive 3D model</h4>
+              <p>The next step is the creation of a three-dimensional model of the house. We develop a detailed 3D model
+                that allows us to resolve mass, volumes, façade composition, and overall architectural appearance.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">4</div>
+            <div>
+              <h4>Planning solution</h4>
+              <p>Next, based on the previous stages, we develop a refined floor plan with furniture placement, ensuring
+                that all dimensions, clearances, and proportions are accurate. We also integrate the layout into a
+                three-dimensional 3D model, allowing you to visually explore the interior.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">5</div>
+            <div>
+              <h4>Visualizations</h4>
+              <p>We provide a detailed 3D model or visualization team, who use it to create photorealistic images of the
+                house with its real surroundings, façade materials and technical solutions.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">6</div>
+            <div>
+              <h4>Detail and packaging of the project into an album</h4>
+              <p>As a final result, we compile all the developed materials into a comprehensive project album that
+                provides a complete understanding of the house's design, functionality, and final appearance.</p>
+            </div>
+          </article>
+        </div>
+        <div class="result-block">
+          <h3>RESULTS OF THE 1ST STAGE</h3>
+          <p>Thus, you receive not just a well-developed architectural concept—a sketch project that can be further
+            developed into detailed construction documentation—but also an estimated budget for the realization of the
+            proposed design.</p>
+        </div>
+      </section>
 
-  <footer class="site-footer" id="contact">
-    <div class="footer-cta">
-      <a class="brand footer-brand" href="index.html" aria-label="ZARCH">
-        <span class="brand-mark" aria-hidden="true">ZA</span>
-      </a>
-      <h2>Ready to work<br><span>With us?</span></h2>
-      <div class="footer-actions">
-        <a class="btn" href="about.html">CHAT</a>
-        <button class="btn" type="button" data-open-start>LET'S START YOUR INDIVIDUAL PROJECT</button>
-      </div>
-    </div>
-    <div class="footer-links">
-      <div>
-        <h3>Works</h3>
-        <div class="pills">
-          <a href="about.html">About us</a>
-          <a href="projects.html">Projects</a>
+      <section class="content-pane content-stage-2 wrap section-line-top">
+        <div class="pane-heading with-period">
+          <div>
+            <div class="stage-kicker">STAGE 2</div>
+            <h2>ARCHITECTURAL AND PLANNING CONCEPT<br>(CONSTRUCTION PROJECT)</h2>
+            <p>The main goal of this stage is to provide clear instructions and explanations on how to transform our
+              concept into reality. The construction project is divided into two main sections, completed by two
+              different specialists: architectural solutions and design solutions.</p>
+            <h3>MAIN SECTIONS:</h3>
+          </div>
+          <div class="period"><small>Implementation period</small><strong>3 MONTHS</strong></div>
+        </div>
+        <div class="timeline">
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">1</div>
+            <div>
+              <h4>Constructive solutions</h4>
+              <p>This section is handled by the structural engineer, who calculates the loads on the building and
+                develops all structural elements. The main task is to ensure the safety, durability, and reliability of
+                the house for many years while keeping the chosen solutions within the established budget.</p>
+              <p>To begin the structural design, we need geological data from your site. You can provide this
+                information yourself through specialized companies or request this service from us for an additional
+                fee.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">2</div>
+            <div>
+              <h4>Architectural solutions</h4>
+              <p>An architect works alongside the structural engineer, developing our preliminary design into a complete
+                set of technical drawings, explanations, and documentation. Their job is to define how the house will be
+                built according to the original concept.</p>
+              <p>After the architect completes the documentation, you receive a detailed schedule of the main materials
+                required for construction, allowing you to understand the quantities needed for the project.</p>
+            </div>
+          </article>
+        </div>
+        <div class="result-block">
+          <h3>RESULTS OF THE 2ND STAGE</h3>
+          <p>The result of this stage is a complete construction project—a detailed guide explaining how to build the
+            house, what materials to use, and how to execute complex technical solutions. Such documentation helps
+            optimize construction costs and provides precise material quantities.</p>
+        </div>
+      </section>
+
+      <section class="content-pane content-stage-3 wrap section-line-top">
+        <div class="pane-heading with-period">
+          <div>
+            <div class="stage-kicker">STAGE 3</div>
+            <h2>ENGINEERING NETWORKS</h2>
+            <p>The goal of this stage is to provide a clear understanding of the engineering systems and technologies
+              that will be implemented in the home. We recommend developing the utility networks section together with
+              us, as part of a turnkey construction project.</p>
+            <ul class="compact-list">
+              <li>heating</li>
+              <li>ventilation</li>
+              <li>water supply</li>
+              <li>sewerage</li>
+              <li>electrical systems</li>
+            </ul>
+            <h3>COMPOSITION OF THE ENGINEERING PROJECT:</h3>
+          </div>
+          <div class="period"><small>Implementation period</small><strong>3 MONTHS</strong></div>
+        </div>
+        <div class="timeline">
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">1</div>
+            <div>
+              <h4>Study and analysis of the conditions of implementation</h4>
+              <p>The development of the utility networks section begins with a detailed analysis of the conditions
+                required for installation of the future technical systems. We coordinate the work of specialist
+                engineers who study the initial data, evaluate possible solutions, and develop the most efficient
+                engineering systems tailored to your project.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">2</div>
+            <div>
+              <h4>Detailed BIM model</h4>
+              <p>All selected engineering concepts are incorporated into our digital 3D model and carefully reviewed by
+                the architect to ensure proper coordination between all involved specialists. This verification process
+                helps identify and eliminate possible conflicts, overlaps, or technical inconsistencies between the
+                different systems.</p>
+            </div>
+          </article>
+        </div>
+        <div class="result-block">
+          <h3>RESULTS OF THE 3RD STAGE</h3>
+          <p>As a result, you receive a complete and integrated design package for all engineering systems of your home.
+            An engineering project makes construction predictable and coordinated while helping optimize the overall
+            cost of realization.</p>
+        </div>
+      </section>
+
+      <section class="content-pane content-stage-4 wrap section-line-top">
+        <div class="pane-heading with-period">
+          <div>
+            <div class="stage-kicker">STAGE 4</div>
+            <h2>CONSTRUCTION OF THE FACILITY</h2>
+            <p>This stage involves monitoring construction processes and deadlines on our part, relieving you of the
+              need to do it yourself and “live” at the construction site. There are 2 options for our participation:
+              customer service and copyright supervision.</p>
+            <h3>SECTION COMPOSITION:</h3>
+          </div>
+          <div class="period"><small>Implementation period</small><strong>6 MONTHS</strong></div>
+        </div>
+        <div class="timeline">
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">1</div>
+            <div>
+              <h4>Customer service</h4>
+              <p>At this stage, we take full responsibility for the coordination and management of the construction
+                process. We prepare a detailed estimate and a complete specification of the works planned on site for
+                your approval. Once approved, we organize the project into clear phases with defined deadlines and
+                coordinate the work of all contractors involved.</p>
+              <ul class="compact-list">
+                <li>architect-designer who ensures the construction remains faithful to the approved design;</li>
+                <li>construction manager who oversees daily operations and supervises the work on site;</li>
+                <li>independent technical supervision specialists who provide an objective assessment of construction
+                  quality.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">2</div>
+            <div>
+              <h4>Author's supervision</h4>
+              <p>At this stage, our involvement and supervision of the construction process are more limited, as the
+                majority of coordination and communication with contractors are handled directly by you. Our role is to
+                verify that construction follows the architectural solutions developed in the project.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-pane content-stage-5 wrap section-line-top">
+        <div class="pane-heading with-period">
+          <div>
+            <div class="stage-kicker">STAGE 5</div>
+            <h2>INTERIOR DESIGN</h2>
+            <p>The main goal of interior design is to create a distinctive and comfortable environment that responds to
+              your functional needs, aesthetic preferences, and lifestyle. As a result, you receive a carefully planned
+              and ergonomic interior where every element is designed for your comfort, practicality, and daily
+              enjoyment.</p>
+            <h3>WORK ON INTERIOR DESIGN IS BUILT IN SEVERAL STAGES:</h3>
+          </div>
+          <div class="period"><small>Implementation period</small><strong>3 MONTHS</strong></div>
+        </div>
+        <div class="timeline timeline-with-icon">
+          <article class="timeline-row">
+            <div class="timeline-line icon-cell">
+              <div class="brief-icon icon-people"><span></span></div>
+            </div>
+            <div class="step-number">1</div>
+            <div>
+              <h4>Meeting-acquaintance</h4>
+              <p>Together with our designer, we hold an initial discussion to understand your preferences, expectations,
+                and vision for the future interior. At this stage, we also gather the necessary project information.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">2</div>
+            <div>
+              <h4>Conclusion of a contract</h4>
+              <p>Next, based on your requirements, we prepare a personalized proposal and finalize the agreement. Once
+                the contract is approved and signed, we proceed with the interior design development.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">3</div>
+            <div>
+              <h4>Concept</h4>
+              <p>At this stage, we bring together your preferences and concepts with the existing project conditions. We
+                explore different layout solutions, define the architectural design and functional logic, and create a
+                visual direction for every room.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">4</div>
+            <div>
+              <h4>Photorealistic visualizations.</h4>
+              <p>We provide the developed interior concept to our visualization specialists, who transform it into
+                photorealistic images of your future space. At this stage, we also finalize the selection of finishing
+                materials and technical solutions.</p>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">5</div>
+            <div>
+              <h4>Detail and packaging of the project into an album</h4>
+              <p>As a final step, we compile all the developed materials into a complete design album that provides you
+                with a clear understanding of the interior concept, its details, and final appearance.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="content-pane content-stage-6 wrap section-line-top">
+        <div class="pane-heading with-period">
+          <div>
+            <div class="stage-kicker">STAGE 6</div>
+            <h2>INTERIOR IMPLEMENTATION</h2>
+            <p>This stage involves monitoring construction processes and deadlines on our part, eliminating the need for
+              you to do it yourself and “live” at a construction site. There are 2 options for our participation:
+              customer service and copyright supervision.</p>
+            <h3>MAIN SECTIONS:</h3>
+          </div>
+          <div class="period"><small>Implementation period</small><strong>6 MONTHS</strong></div>
+        </div>
+        <div class="timeline timeline-with-icon">
+          <article class="timeline-row">
+            <div class="timeline-line icon-cell">
+              <div class="brief-icon icon-people"><span></span></div>
+            </div>
+            <div class="step-number">1</div>
+            <div>
+              <h4>Customer service</h4>
+              <p>Here we take full responsibility for the coordination and supervision of the implementation process. We
+                prepare a complete estimate and specification of the works that will be carried out on site for your
+                approval. After approval, we divide the work into stages with deadlines and organize the activities of
+                contractors.</p>
+              <ul class="compact-list">
+                <li>an architect-designer who ensures that implementation corresponds to the project;</li>
+                <li>a construction manager who supervises all work directly on site;</li>
+                <li>technical supervision specialists for independent evaluation of implementation quality.</li>
+              </ul>
+            </div>
+          </article>
+          <article class="timeline-row">
+            <div class="timeline-line"></div>
+            <div class="step-number">2</div>
+            <div>
+              <h4>Author's supervision</h4>
+              <p>At this stage, our involvement and supervision of the implementation process are more limited, as the
+                majority of coordination and communication with contractors are handled directly by you. Our role is to
+                verify that the execution remains consistent with the design solutions developed in the project.</p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="calculator wrap section-line-top">
+        <div class="calculator-grid">
+          <div>
+            <h2>ARCHITECTURAL<br><strong>DESIGN ?? ATION</strong></h2>
+            <p>CALCULATION COST</p>
+          </div>
+          <div class="calc-buttons">
+            <button type="button">COST OF AN ARCHITECTURAL<br>PROJECT</button>
+            <button type="button">COST OF INTERIOR DESIGN</button>
+          </div>
+        </div>
+        <div class="calculator-grid calculator-bottom">
+          <h3>PRELIMINARY ASSESSMENT OF THE COST<br>OF DESIGNING A HOUSE AND DEVELOPING<br>A DESIGN PROJECT FOR THE
+            INTERIOR OF<br>AN APARTMENT</h3>
+          <div>
+            <p><strong>The calculation considers several key factors, including the type of project, the total area, and
+                the scope of the work. This allows clients to get a clear preliminary estimate of the design and
+                documentation costs for their project.</strong></p>
+            <p><strong>We understand that budgeting is an essential part of any construction or renovation project. Our
+                Design Cost Calculator is designed to give you a quick and reliable estimate based on the specific
+                characteristics of your project.</strong></p>
+            <p><strong>Simply enter your project details to discover an estimated design cost and take the first step
+                toward planning your project with confidence.</strong></p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="wrap footer-inner">
+        <div class="footer-left">
+          <span class="brand-mark" aria-hidden="true">ZA</span>
+          <h2><strong>Ready to work</strong><br>With us?</h2>
+          <div class="footer-pills"><a href="#stages">STAGES</a><label for="project-cost">LETS START YOUR DREAM
+              PROJECT</label></div>
+        </div>
+        <div class="footer-right">
+          <div>
+            <h3>Works</h3><a href="index.html">HOME</a><a href="projects.html">PROJECTS</a>
+          </div>
+          <div>
+            <h3>Works</h3><a href="about.html">ABOUT US</a><a href="about.html#team">OUR TEAM</a><a href="index.html#contact">CONTACT US</a>
+          </div>
+          <div>
+            <h3>Zarch News</h3>
+            <form><input type="email" placeholder="email"><button type="submit">SIGN UP</button></form>
+          </div>
         </div>
       </div>
-      <div>
-        <h3>Works</h3>
-        <div class="pills">
-          <a href="#stages">STAGES</a>
-          <a href="about.html#team">OUR TEAM</a>
-          <a href="#contact">CONTACT US</a>
-        </div>
-      </div>
-      <div>
-        <h3>Zarch News</h3>
-        <form class="newsletter">
-          <label class="sr-only" for="news-email">Email</label>
-          <input id="news-email" type="email" placeholder="email" required>
-          <button type="submit">SIGN UP</button>
-        </form>
-      </div>
-    </div>
-  </footer>
-
-  <div class="modal" id="start-modal" hidden>
-    <div class="modal-backdrop" data-close-modal></div>
-    <article class="start-card" role="dialog" aria-modal="true" aria-labelledby="start-title">
-      <header class="card-top">
-        <p><span class="brand-mark tiny">ZA</span> Your dream project start here</p>
-        <button class="text-link" type="button" data-close-modal>Close project</button>
-      </header>
-      <div class="start-grid">
-        <div>
-          <h2 id="start-title">Answer the questions to have a free architect consultation</h2>
-          <p class="offer">Special offer from ZARCH</p>
-          <a class="btn" href="mailto:hello@zarch.studio">Let's start the project !</a>
-        </div>
-        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="Geometric concrete facade">
-      </div>
-    </article>
+    </footer>
   </div>
 </body>
+
 </html>

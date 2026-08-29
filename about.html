@@ -1,13 +1,10 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ZARCH — Office</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ZARCH — About</title>
+  <link rel="stylesheet" href="about.css" />
   <script src="script.js" defer></script>
 </head>
 <body class="page-about">
@@ -16,11 +13,13 @@
       <span class="brand-mark" aria-hidden="true">ZA</span>
       <span class="brand-text">ZARCH<span>01</span></span>
     </a>
+
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
       <span class="sr-only">Menu</span>
       <span></span><span></span>
     </button>
-    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+
+    <nav class="main-nav" id="primary-nav" aria-label="Main navigation">
       <a href="index.html">Home</a>
       <a href="cost.html">Projects cost</a>
       <a href="projects.html">Projects</a>
@@ -29,138 +28,170 @@
   </header>
 
   <main>
-    <section class="about-hero">
-      <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=2400&q=80" alt="Modern building facade viewed from below">
-      <a class="hero-cta" href="projects.html">About us</a>
+    <section class="hero" aria-label="Architecture hero image">
+      <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1600&q=80" alt="Modern dark architectural facade" />
+      <a class="hero-button" href="#story">Read Us</a>
     </section>
 
-    <div class="about-scene">
-      <article class="about-sheet">
-        <p class="sheet-label">ABOUT ZARCH</p>
-        <h1>ABOUT ZARCH</h1>
-        <h2 class="about-sheet-subtitle">01 ARCHITECTS</h2>
+    <section class="story-stage" id="story">
+      <article class="story-card">
+        <div class="story-card__body">
+          <div class="story-kicker">OUR STORY</div>
+          <h1 class="story-title">ABOUT ZARCH</h1>
+          <h2 class="story-subtitle">01 ARCHITECTS</h2>
 
-        <div class="about-intro">
-          <div></div>
-          <div>
-            <p>ZARCH 01 Architects is an independent studio working across architecture, interiors, landscape and visualization. We treat every commission as a long conversation between place, programme and the people who will inhabit the work.</p>
-            <p>From civic buildings to private houses, the office looks for a clear idea that can survive construction, climate and time. Drawings, models and images are tools — the project itself is the beginning of a building’s life.</p>
+          <div class="story-middle">
+            <div class="story-copy story-copy-top">
+              <p>
+                01Architects is a collaborative architectural practice founded on July 8, 2021, born from the belief that great ideas emerge when creative minds come together. What began as a simple initiative to develop skills in architectural software quickly evolved into a collective dedicated to design exploration and innovation.
+              </p>
+              <p>
+                The name 01Architects symbolizes unity — many individuals forming one vision. The practice encompasses collaboration, experimentation, and continuous learning within architecture and digital design.
+              </p>
+              <p>
+                Driven by creativity and technical mastery, 01Architects aims to cultivate new talents, explore contemporary architectural ideas, and contribute meaningful design solutions to the built environment.
+              </p>
+            </div>
+
+            <div class="discipline-label">DISCIPLINE</div>
+
+            <div class="discipline-grid">
+              <figure>
+                <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" alt="Architecture" />
+                <figcaption>Architecture</figcaption>
+              </figure>
+              <figure>
+                <img src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?auto=format&fit=crop&w=900&q=80" alt="Interior design" />
+                <figcaption>Interior design</figcaption>
+              </figure>
+              <figure>
+                <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=900&q=80" alt="Shop Drawing" />
+                <figcaption>Shop Drawing</figcaption>
+              </figure>
+              <figure>
+                <img src="https://images.unsplash.com/photo-1486325212027-8081e485255e?auto=format&fit=crop&w=900&q=80" alt="Visualization" />
+                <figcaption>Visualization</figcaption>
+              </figure>
+            </div>
+
+            <div class="story-copy story-copy-lower">
+              <p>
+                01Architects is a collaborative architectural practice founded on July 8, 2021, born from the belief that great ideas emerge when creative minds come together. What began as a simple initiative to develop skills in architectural software quickly evolved into a collective dedicated to design exploration and innovation.
+              </p>
+              <p>
+                The name 01Architects symbolizes unity — many individuals forming one vision. The practice encompasses collaboration, experimentation, and continuous learning within architecture and digital design.
+              </p>
+              <p>
+                Driven by creativity and technical mastery, 01Architects aims to cultivate new talents, explore contemporary architectural ideas, and contribute meaningful design solutions to the built environment.
+              </p>
+            </div>
+
+            <section class="manifesto" aria-label="Zarch manifesto">
+              <div class="manifesto-block">
+                <h3>Architecture with an idea</h3>
+                <p>
+                  When designing with us, you choose aesthetics and premium quality. Together we materialize your ideal space, dreams and desires beyond expectations.
+                </p>
+              </div>
+
+              <div class="manifesto-block manifesto-block--centered">
+                <h3>Project — is just the beginning</h3>
+                <p>
+                  Using the latest global trends in design and engineering, we create a special inspiring environment for people who need more. More than just a house. Functionality, aesthetics and quality — we are the heart of every life scenario for our customers.
+                </p>
+              </div>
+            </section>
+
+            <div class="slogan-row">
+              <h3>Built to Last. Designed to<br />Matter.</h3>
+            </div>
+
+            <div class="company-slogan">
+              <p>THE SLOGAN OF OUR COMPANY</p>
+              <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80" alt="Zarch logo" />
+              <span aria-hidden="true"></span>
+            </div>
           </div>
         </div>
 
-        <div class="about-fields">
-          <figure>
-            <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80" alt="Urban architecture">
-            <figcaption>Architecture</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=800&q=80" alt="Interior design space">
-            <figcaption>Interior design</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=800&q=80" alt="Shop drawing facade">
-            <figcaption>Shop Drawing</figcaption>
-          </figure>
-          <figure>
-            <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=800&q=80" alt="Architectural visualization">
-            <figcaption>Visualization</figcaption>
-          </figure>
-        </div>
+        <footer class="mini-footer">
+          <div class="mini-footer__cta">
+            <span class="brand-mark" aria-hidden="true">ZA</span>
+            <h3>Ready to work</h3>
+            <p>With us?</p>
+            <div class="footer-actions">
+              <a href="#">MAP</a>
+              <a href="#">LET'S GET ACQUAINTED RIGHT</a>
+            </div>
+          </div>
 
-        <section class="about-block">
-          <h2>Architecture with an idea</h2>
-          <p>We start from a single, readable concept and test it against structure, light and use. The result should be specific to its site, not a style applied from elsewhere.</p>
-        </section>
+          <div class="mini-footer__links">
+            <div class="link-group">
+              <h4>Works</h4>
+              <div class="pills">
+                <a href="projects.html">Works in</a>
+                <a href="projects.html">Projects</a>
+              </div>
+            </div>
 
-        <section class="about-block" id="team">
-          <h2>Project — is just the beginning</h2>
-          <p>Delivery does not end at the last drawing. We stay with the client through construction and the first years of occupation, so the building can keep the idea that made it.</p>
-        </section>
+            <div class="link-group">
+              <h4>Works</h4>
+              <div class="pills">
+                <a href="mailto:hello@example.com">email</a>
+                <a href="tel:+1234567890">CALL TIME</a>
+                <a href="index.html#contact">CONTACT US</a>
+              </div>
+            </div>
 
-        <section class="slogan">
-          <p class="slogan-line">BUILT TO LAST.<br>DESIGNED TO MATTER.</p>
-          <p class="slogan-sub">THE SLOGAN OF OUR COMPANY</p>
-          <span class="brand-mark large">ZA</span>
-        </section>
+            <div class="link-group link-group--news">
+              <h4>Zarch News</h4>
+              <div class="newsletter">
+                <span></span>
+                <button type="button">SIGN UP</button>
+              </div>
+            </div>
+          </div>
+        </footer>
       </article>
-    </div>
+    </section>
 
+    <section class="about-summary">
+      <h2 class="about-summary__heading">About Us</h2>
+
+      <div class="about-summary__grid">
+        <div class="summary-cell summary-cell--brand">
+          <h3>ZARCH<br /><strong>01 Architects</strong></h3>
+        </div>
+
+        <div class="summary-cell summary-cell--intro">
+          <h3>ARCHITECTURAL STUDIO ZARCH<br /><strong>01 Architects</strong></h3>
+          <p>
+            01Architects is a collaborative architectural practice founded on July 8, 2021, born from the belief that great ideas emerge when creative minds come together. What began as a simple initiative to develop skills in architectural software quickly evolved into a collective dedicated to design exploration and innovation.
+          </p>
+        </div>
+
+        <div class="summary-cell summary-cell--slogan">
+          <h3>BUILT TO LAST. DESIGNED TO MATTER</h3>
+          <p>THE SLOGAN OF OUR COMPANY</p>
+          <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80" alt="Zarch logo" />
+        </div>
+
+        <div class="summary-cell summary-cell--manifesto">
+          <div>
+            <h3>Architecture with an idea</h3>
+            <p>
+              When designing with us, you choose aesthetics and premium quality. Together we materialize your ideal space, dreams and desires beyond expectations.
+            </p>
+          </div>
+          <div>
+            <h3>Project — is just the beginning</h3>
+            <p>
+              Using the latest global trends in design and engineering, we create a special inspiring environment for people who need more. More than just a house. Functionality, aesthetics and quality — we are the heart of every life scenario for our customers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-
-  <footer class="site-footer footer-light" id="contact">
-    <div class="footer-cta">
-      <a class="brand footer-brand" href="index.html" aria-label="ZARCH">
-        <span class="brand-mark" aria-hidden="true">ZA</span>
-      </a>
-      <h2>Ready to work<br><span>With us?</span></h2>
-      <div class="footer-actions">
-        <a class="btn" href="cost.html">Stage</a>
-        <button class="btn" type="button" data-open-start>LET'S START YOUR DREAM PROJECT</button>
-      </div>
-    </div>
-    <div class="footer-links">
-      <div>
-        <h3>Works</h3>
-        <div class="pills">
-          <a href="index.html">HOME</a>
-          <a href="projects.html">PROJECTS</a>
-        </div>
-      </div>
-      <div>
-        <h3>Works</h3>
-        <div class="pills">
-          <a href="about.html">ABOUT US</a>
-          <a href="about.html#team">OUR TEAM</a>
-          <a href="#contact">CONTACT US</a>
-        </div>
-      </div>
-      <div>
-        <h3>Zarch News</h3>
-        <form class="newsletter">
-          <label class="sr-only" for="news-email">Email</label>
-          <input id="news-email" type="email" placeholder="email" required>
-          <button type="submit">SIGN UP</button>
-        </form>
-      </div>
-    </div>
-  </footer>
-
-  <section class="about-lower wrap" aria-labelledby="about-lower-title">
-    <h2 id="about-lower-title">About Us</h2>
-    <div class="about-lower-grid">
-      <div class="about-lower-brand">ZARCH<br><strong>01 Architects</strong></div>
-      <div class="about-lower-copy">
-        <h3>ARCHITECTURAL STUDIO ZARCH<br>01 Architects</h3>
-        <p>ZARCH 01 Architects is an independent studio working across architecture, interiors, landscape and visualization. We treat every commission as a long conversation between place, programme and the people who will inhabit the work.</p>
-        <h3>Architecture with an idea</h3>
-        <p>We start from a single, readable concept and test it against structure, light and use.</p>
-        <h3>Project — is just the beginning</h3>
-        <p>Delivery does not end at the last drawing. We stay with the client through construction and the first years of occupation.</p>
-      </div>
-      <div class="about-lower-slogan">
-        <p>BUILT TO LAST. DESIGNED TO MATTER</p>
-        <span>THE SLOGAN OF OUR COMPANY</span>
-        <span class="brand-mark large">ZA</span>
-      </div>
-    </div>
-  </section>
-
-  <div class="modal" id="start-modal" hidden>
-    <div class="modal-backdrop" data-close-modal></div>
-    <article class="start-card" role="dialog" aria-modal="true" aria-labelledby="start-title">
-      <header class="card-top">
-        <p><span class="brand-mark tiny">ZA</span> Your dream project start here</p>
-        <button class="text-link" type="button" data-close-modal>Close project</button>
-      </header>
-      <div class="start-grid">
-        <div>
-          <h2 id="start-title">Answer the questions to have a free architect consultation</h2>
-          <p class="offer">Special offer from ZARCH</p>
-          <a class="btn" href="cost.html">Let's start the project !</a>
-        </div>
-        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=1200&q=80" alt="Geometric concrete facade">
-      </div>
-    </article>
-  </div>
 </body>
 </html>
