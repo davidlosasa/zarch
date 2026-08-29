@@ -27,9 +27,10 @@ label{cursor:pointer}
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:16px;
+  gap:clamp(12px, 1.8vw, 26px);
+  width:100%;
   min-height:88px;
-  padding:16px max(var(--gutter), calc((100vw - var(--max)) / 2));
+  padding:16px var(--gutter);
   position:relative;
   z-index:30;
   background: rgba(244, 244, 244, 0.96);
@@ -71,7 +72,7 @@ label{cursor:pointer}
   display:flex;
   flex-wrap:wrap;
   justify-content:flex-end;
-  gap:10px;
+  gap:clamp(8px, 0.8vw, 18px);
 }
 
 .main-nav a {
