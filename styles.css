@@ -100,7 +100,7 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
   justify-content: center;
   background: var(--pill);
   border: 0;
-  border-radius: 999px;
+  border-radius: 5px;
   padding: 10px 20px;
   font-size: 13px;
   cursor: pointer;
@@ -233,15 +233,121 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 
 .fields { padding: 64px 0 80px; }
 .fields h2 { font-weight: 600; margin-bottom: 28px; }
-.field-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 14px; }
-.field-grid img {
-  width: 100%;
-  aspect-ratio: 3 / 4;
-  object-fit: cover;
-  border-radius: 9px;
-  margin-bottom: 10px;
+
+.fields-section {
+  max-width: min(100%, 1280px);
+  margin: 0 auto;
+  padding: 64px 0 80px;
 }
-.field-grid span { font-size: 14px; }
+
+.fields-wrap {
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  height: 480px;
+}
+
+.fields-wrap .card {
+  position: relative;
+  flex: 1 1 0%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 20px;
+  overflow: hidden;
+  cursor: pointer;
+  background-size: cover;
+  background-position: center;
+  will-change: flex-grow;
+  transition: flex-grow 0.8s cubic-bezier(0.25, 1, 0.3, 1), transform 0.4s ease;
+}
+
+.card-1 {
+  background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80');
+}
+
+.card-2 {
+  background-image: url('https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=1200&q=80');
+}
+
+.card-3 {
+  background-image: url('https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80');
+}
+
+.card-4 {
+  background-image: url('https://images.unsplash.com/photo-1519999482648-25049ddd37b1?auto=format&fit=crop&w=1200&q=80');
+}
+
+.fields-wrap .card:hover {
+  flex-grow: 2.5;
+}
+
+.fields-wrap:hover .card:not(:hover) {
+  flex-grow: 0.7;
+}
+
+.card-content {
+  padding: 24px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.65), transparent);
+  transition: padding 0.4s ease;
+}
+
+.card-title {
+  font-size: 1.4rem;
+  font-weight: 400;
+  color: #ffffff;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+}
+
+.arrow {
+  display: inline-block;
+  transition: transform 0.4s ease;
+}
+
+.fields-wrap .card:hover .arrow {
+  transform: translateX(6px);
+}
+
+@media (max-width: 768px) {
+  .fields-wrap {
+    flex-direction: column;
+    height: auto;
+    gap: 40px;
+  }
+
+  .fields-wrap .card {
+    flex: none;
+    width: 100%;
+    height: 240px;
+    border-radius: 16px;
+    overflow: visible;
+    justify-content: flex-start;
+  }
+
+  .fields-wrap .card:hover,
+  .fields-wrap:hover .card:not(:hover) {
+    flex-grow: 0;
+  }
+
+  .card-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 12px 0 0 0;
+    background: none;
+  }
+
+  .card-title {
+    color: #111111;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+}
 
 .world-map {
   position: relative;
@@ -322,7 +428,7 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
   display: flex;
   max-width: 380px;
   background: #cfcfcf;
-  border-radius: 999px;
+  border-radius: 5px;
   overflow: hidden;
   padding: 4px;
 }
@@ -890,11 +996,11 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
   overflow: hidden;
 }
 .start-card {
-  width: min(80vw, 1100px);
-  max-width: calc(100vw - 48px);
-  height: min(80vh, 760px);
-  max-height: calc(100vh - 48px);
-  border-radius: 28px;
+  width: min(82vw, 1280px);
+  max-width: calc(100vw - 40px);
+  height: min(82vh, 820px);
+  max-height: calc(100vh - 40px);
+  border-radius: 30px;
 }
 
 .project-card-detail {
@@ -906,11 +1012,11 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 }
 
 .start-modal .start-card {
-  width: min(80vw, 1100px);
-  max-width: calc(100vw - 48px);
-  height: min(80vh, 760px);
-  max-height: calc(100vh - 48px);
-  border-radius: 28px;
+  width: min(82vw, 1280px);
+  max-width: calc(100vw - 40px);
+  height: min(82vh, 820px);
+  max-height: calc(100vh - 40px);
+  border-radius: 30px;
 }
 .card-top {
   display: flex;

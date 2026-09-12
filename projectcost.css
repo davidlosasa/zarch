@@ -24,76 +24,76 @@ label{cursor:pointer}
 .logo{display:block;width:76px;height:auto;object-fit:contain}
 
 .site-header {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:clamp(12px, 1.8vw, 26px);
-  width:100%;
-  min-height:88px;
-  padding:16px var(--gutter);
-  position:relative;
-  z-index:30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: clamp(12px, 1.8vw, 26px);
+  width: 100%;
+  min-height: 88px;
+  padding: 16px var(--gutter);
+  position: relative;
+  z-index: 30;
   background: rgba(244, 244, 244, 0.96);
 }
 
 .brand {
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
 }
 
 .brand-mark {
-  display:inline-grid;
-  place-items:center;
-  min-width:52px;
-  height:40px;
-  padding:0 8px;
-  background:var(--paper);
-  font-weight:700;
-  letter-spacing:-0.12em;
-  font-size:22px;
-  transform:skewX(-12deg);
+  display: inline-grid;
+  place-items: center;
+  min-width: 52px;
+  height: 40px;
+  padding: 0 8px;
+  background: var(--paper);
+  font-weight: 700;
+  letter-spacing: -0.12em;
+  font-size: 22px;
+  transform: skewX(-12deg);
 }
 
 .brand-text {
-  font-weight:700;
-  letter-spacing:-0.06em;
-  font-size:18px;
+  font-weight: 700;
+  letter-spacing: -0.06em;
+  font-size: 18px;
 }
 
 .brand-text span {
-  font-size:0.62em;
-  margin-left:3px;
-  font-weight:500;
-  vertical-align:super;
+  font-size: 0.62em;
+  margin-left: 3px;
+  font-weight: 500;
+  vertical-align: super;
 }
 
 .main-nav {
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-  gap:clamp(8px, 0.8vw, 18px);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: clamp(8px, 0.8vw, 18px);
 }
 
 .main-nav a {
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  background:var(--pill);
-  border:0;
-  border-radius:999px;
-  padding:10px 20px;
-  font-size:13px;
-  cursor:pointer;
-  transition:background .2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--pill);
+  border: 0;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
 .main-nav a:hover {
-  background:var(--pill-hover);
+  background: var(--pill-hover);
 }
 
 .main-nav .is-active {
-  background:var(--pill-hover);
+  background: var(--pill-hover);
 }
 
 .sr-only {

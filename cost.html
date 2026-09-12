@@ -24,26 +24,26 @@
   <input class="page-state" type="radio" name="project-stage" id="stage-5">
   <input class="page-state" type="radio" name="project-stage" id="stage-6">
 
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="ZARCH home">
+      <span class="brand-mark" aria-hidden="true">ZA</span>
+      <span class="brand-text">ZARCH<span>01</span></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
+      <span class="sr-only">Menu</span>
+      <span></span><span></span>
+    </button>
+    <nav class="main-nav" id="primary-nav" aria-label="Primary">
+      <a href="index.html">Home</a>
+      <a class="is-active" href="cost.html">Projects cost</a>
+      <a href="projects.html">Projects</a>
+      <a href="about.html">Office</a>
+    </nav>
+  </header>
+
   <div class="site-page">
 
     <section class="hero wrap">
-      <header class="site-header">
-        <a class="brand" href="index.html" aria-label="ZARCH home">
-          <span class="brand-mark" aria-hidden="true">ZA</span>
-          <span class="brand-text">ZARCH<span>01</span></span>
-        </a>
-        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="primary-nav">
-          <span class="sr-only">Menu</span>
-          <span></span><span></span>
-        </button>
-        <nav class="main-nav" id="primary-nav" aria-label="Primary">
-          <a href="index.html">Home</a>
-          <a class="is-active" href="cost.html">Projects cost</a>
-          <a href="projects.html">Projects</a>
-          <a href="about.html">Office</a>
-        </nav>
-      </header>
-
       <div class="hero-grid">
         <div class="hero-title">
           <h1>DEVELOPMENT<br><span>INDIVIDUAL PROJECT</span></h1>
@@ -494,27 +494,40 @@
       </section>
     </main>
 
-    <footer class="footer">
-      <div class="wrap footer-inner">
-        <div class="footer-left">
+    <footer class="site-footer" id="contact">
+      <div class="footer-cta">
+        <a class="brand footer-brand" href="index.html" aria-label="ZARCH">
           <span class="brand-mark" aria-hidden="true">ZA</span>
-          <h2><strong>Ready to work</strong><br>With us?</h2>
-          <div class="footer-pills">
-            <a href="#stages">STAGES</a>
-            <button class="btn" type="button" data-open-start>LET'S START YOUR DREAM PROJECT</button>
+        </a>
+        <h2>Ready to work<br><span>With us?</span></h2>
+        <div class="footer-actions">
+          <a class="btn" href="cost.html">Stage</a>
+          <button class="btn" type="button" data-open-start>LET'S START YOUR DREAM PROJECT</button>
+        </div>
+      </div>
+      <div class="footer-links">
+        <div>
+          <h3>Works</h3>
+          <div class="pills">
+            <a href="index.html">HOME</a>
+            <a href="projects.html">PROJECTS</a>
           </div>
         </div>
-        <div class="footer-right">
-          <div>
-            <h3>Works</h3><a href="index.html">HOME</a><a href="projects.html">PROJECTS</a>
+        <div>
+          <h3>Works</h3>
+          <div class="pills">
+            <a href="about.html">ABOUT US</a>
+            <a href="about.html#team">OUR TEAM</a>
+            <a href="#contact">CONTACT US</a>
           </div>
-          <div>
-            <h3>Works</h3><a href="about.html">ABOUT US</a><a href="about.html#team">OUR TEAM</a><a href="index.html#contact">CONTACT US</a>
-          </div>
-          <div>
-            <h3>Zarch News</h3>
-            <form><input type="email" placeholder="email"><button type="submit">SIGN UP</button></form>
-          </div>
+        </div>
+        <div>
+          <h3>Zarch News</h3>
+          <form class="newsletter">
+            <label class="sr-only" for="news-email">Email</label>
+            <input id="news-email" type="email" name="email" placeholder="email" required>
+            <button type="submit">SIGN UP</button>
+          </form>
         </div>
       </div>
     </footer>
