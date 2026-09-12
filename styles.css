@@ -13,7 +13,7 @@
   --line: #1c1c1c;
   --gutter: clamp(16px, 3.2vw, 48px);
   --max: 1440px;
-  --radius: 18px;
+  --radius: 5px;
   --shadow: 0 18px 50px rgba(0, 0, 0, 0.08);
   --font: "Inter", Helvetica, Arial, sans-serif;
 }
@@ -203,7 +203,7 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
   bottom: 14px;
   color: #fff;
   background: rgba(40, 40, 40, 0.55);
-  border-radius: 999px;
+  border-radius: 10px;
   padding: 10px 18px;
   font-size: 12px;
   opacity: 0;
@@ -238,7 +238,7 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
   width: 100%;
   aspect-ratio: 3 / 4;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 9px;
   margin-bottom: 10px;
 }
 .field-grid span { font-size: 14px; }
