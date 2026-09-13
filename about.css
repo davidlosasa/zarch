@@ -6,8 +6,8 @@
   --pill: #e6e6e6;
   --pill-hover: #d9d9d9;
   --radius: 6px;
-  --gutter: clamp(16px, 3.2vw, 48px);
-  --max: 1440px;
+  --gutter: 15px;
+  --max: 2200px;
   --line: #1c1c1c;
   --font: "Inter", Helvetica, Arial, sans-serif;
 }
@@ -56,6 +56,16 @@ a {
   align-items: center;
   gap: 10px;
 }
+
+.brand-logo {
+  display: block;
+  width: 120px;
+  height: auto;
+  object-fit: contain;
+}
+
+.brand-logo.tiny { width: 72px; }
+.brand-logo.large { width: 150px; margin: 0 auto; }
 
 .brand-mark {
   display: inline-grid;
@@ -193,7 +203,7 @@ a {
 
 .hero {
   position: relative;
-  width: calc(100% - clamp(30px, 4.6vw, 58px));
+  width: calc(100% - 30px);
   margin: 0 auto clamp(20px, 3.5vw, 40px);
   overflow: hidden;
   border-radius: var(--radius);
@@ -240,6 +250,16 @@ a {
   overflow: hidden;
 }
 
+@media (min-width: 1600px) {
+  :root { --gutter: 15px; }
+
+  .hero { width: calc(100% - 30px); }
+
+  .story-card { width: calc(100% - 30px); }
+  .story-middle { width: calc(100% - 30px); }
+  .story-copy { width: calc(100% - 30px); }
+}
+
 .story-stage::before {
   content: "";
   position: absolute;
@@ -250,7 +270,7 @@ a {
 }
 
 .story-card {
-  width: min(68%, 980px);
+  width: calc(100% - 30px);
   margin: 0 auto;
   overflow: hidden;
   border-radius: 6px;
@@ -286,7 +306,7 @@ a {
 }
 
 .story-middle {
-  width: 68%;
+  width: calc(100% - 30px);
   margin: clamp(24px, 4.2vw, 52px) auto 0;
 }
 
@@ -338,7 +358,7 @@ a {
 }
 
 .manifesto {
-  width: 90%;
+  width: calc(100% - 30px);
   margin: clamp(28px, 4.4vw, 54px) auto 0;
 }
 
@@ -480,7 +500,7 @@ a {
 }
 
 .about-summary {
-  padding: clamp(20px, 3vw, 36px) clamp(16px, 2.4vw, 30px) clamp(70px, 11vw, 130px);
+  padding: clamp(20px, 3vw, 36px) 15px clamp(70px, 11vw, 130px);
   background: #fff;
 }
 
@@ -491,7 +511,7 @@ a {
 }
 
 .about-summary__grid {
-  width: min(76%, 1150px);
+  width: calc(100% - 30px);
   margin: clamp(42px, 7vw, 85px) auto 0;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -509,6 +529,8 @@ a {
   line-height: 1.05;
   font-weight: 500;
 }
+
+.summary-cell--brand .brand-logo { width: clamp(140px, 18vw, 260px); }
 
 .summary-cell h3 strong {
   font-weight: 700;
