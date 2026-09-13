@@ -15,7 +15,7 @@
 
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--font);font-size:13px;line-height:1.28}
+body{margin:0;color:var(--ink);background:var(--paper);font-family:var(--font);font-size:13px;line-height:1.28;overflow-x:hidden}
 a{color:inherit;text-decoration:none}
 button,input{font:inherit}
 label{cursor:pointer}
@@ -241,10 +241,13 @@ label{cursor:pointer}
 .brief-text p{margin:0 0 13px}
 .brief-text .wide-button{margin-top:28px}
 
-.timeline{margin-top:28px}
-.timeline-row{display:grid;grid-template-columns:43% 7% 50%;min-height:82px;align-items:start;cursor:pointer;transition:background .2s ease}
+.timeline{display:grid;gap:20px;margin-top:28px}
+.timeline-row{display:grid;grid-template-columns:43% 7% 50%;min-height:128px;align-items:stretch;cursor:pointer;transition:background .2s ease}
 .timeline-row:hover{background:rgba(238,235,236,.35)}
-.timeline-line{border-top:1px solid #b8b8b8;height:100%;position:relative}
+.timeline-line{height:100%;min-height:165px;position:relative;overflow:hidden;border-radius:6px;background:#e5e5e5}
+.timeline-image{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;filter:saturate(.75) contrast(1.05);transition:transform .45s ease,filter .3s ease}
+.timeline-row:hover .timeline-image{transform:scale(1.04);filter:saturate(.95) contrast(1.05)}
+.timeline-line::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(0,0,0,.08),rgba(0,0,0,.28));pointer-events:none}
 .timeline-row>div:last-child{padding:20px 15px 20px 26px;font-size:10px;line-height:1.35;transition:padding .35s ease}
 .timeline-row h4{display:flex;align-items:center;gap:14px;margin:0;font-size:10px;font-weight:400}
 .timeline-row p,.timeline-row ul{max-height:0;margin:0;overflow:hidden;opacity:0;transition:max-height .4s ease,opacity .25s ease,margin .35s ease}
@@ -254,6 +257,7 @@ label{cursor:pointer}
 .timeline-row.is-open .stage-detail-toggle{transform:rotate(180deg)}
 .timeline-row .step-number{padding-top:0}
 .timeline-with-icon .icon-cell{display:flex;align-items:flex-start;justify-content:center;padding-top:27px}
+.timeline-with-icon .icon-cell .brief-icon{z-index:1}
 .timeline-with-icon .icon-cell .brief-icon{width:72px;height:72px}
 .result-block{margin-top:18px;padding-bottom:6px}
 .result-block h3{margin:0 0 12px;font-size:17px;font-weight:400}
@@ -297,8 +301,23 @@ label{cursor:pointer}
 
 @media (max-width:1100px){
   .topnav{gap:14px;overflow-x:auto;padding-bottom:4px}
-  .hero-grid{grid-template-columns:1fr 1fr;gap:40px}
+  .hero-grid{grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px}
   .stage-switcher{padding-inline:0}
+  .stage-switcher{grid-template-columns:minmax(0,1.4fr) repeat(3,minmax(0,1fr));}
+  .stages-intro{gap:42px}
+  .calculator-grid{gap:48px}
+  .timeline-row{grid-template-columns:34% 8% 58%}
+  .timeline-line{min-height:150px}
+}
+
+@media (max-width:900px){
+  .hero-grid{grid-template-columns:1fr;gap:30px}
+  .hero-copy{max-width:680px;padding-top:0}
+  .stages-intro{grid-template-columns:1fr;gap:28px;min-height:auto;padding:50px 0 36px}
+  .stage-intro-copy{justify-self:start;max-width:680px}
+  .pane-heading.with-period{grid-template-columns:1fr 150px;gap:28px}
+  .timeline-row{grid-template-columns:28% 8% 64%}
+  .calculator-grid{grid-template-columns:1fr 1fr;gap:28px}
 }
 
 @media (max-width:760px){
@@ -308,21 +327,28 @@ label{cursor:pointer}
   .hero{min-height:auto;padding-bottom:44px}
   .hero-toolbar{margin-top:10px}
   .mini-actions a:nth-child(-n+2){display:none}
-  .hero-grid{grid-template-columns:1fr;gap:30px;margin-top:42px}
+  .hero-grid{gap:24px;margin-top:34px}
   .hero-copy{padding-top:0;max-width:none}
-  .hero-copy h2,.hero-title h1{font-size:25px}
-  .stages-intro{grid-template-columns:1fr;gap:34px;min-height:auto;padding:48px 0}
+  .hero-copy h2,.hero-title h1{font-size:clamp(22px,7vw,25px)}
+  .hero-copy p{font-size:11px}
+  .stages-intro{gap:26px;padding:42px 0 30px}
   .stage-intro-copy{justify-self:start;max-width:none}
-  .stage-switcher{grid-template-columns:1fr 1fr;grid-auto-rows:55px;padding:0 0 55px}
+  .stage-switcher{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:58px;gap:6px;padding:0 0 42px}
   .switch-logo{grid-row:auto;grid-column:1 / -1;height:86px}
   .switch-logo img{width:120px}
-  .content-pane,.calculator{padding-inline:0}
+  .content-pane,.calculator{padding:24px 0 52px;min-height:0}
   .pane-heading.with-period{grid-template-columns:1fr;gap:10px}
+  .pane-heading h2{font-size:22px}
+  .pane-heading .stage-kicker{font-size:21px}
   .period{justify-self:start;margin-top:0;text-align:left}
   .brief-grid{grid-template-columns:70px 1fr 1fr;column-gap:5px}
   .brief-icon{width:64px;height:64px;transform:scale(.75);transform-origin:center}
-  .timeline-row{grid-template-columns:18% 9% 73%;min-height:82px}
-  .timeline-row>div:last-child{padding-left:14px;padding-right:0}
+  .timeline{gap:14px;margin-top:22px}
+  .timeline-row{grid-template-columns:24% 10% 66%;min-height:82px}
+  .timeline-line{min-height:125px}
+  .timeline-row>div:last-child{padding:14px 0 14px 12px}
+  .timeline-row h4{gap:6px;font-size:10px}
+  .timeline-row .stage-detail-toggle{width:22px;height:22px;flex-basis:22px;font-size:14px}
   .calculator-grid{grid-template-columns:1fr;gap:28px}
   .calculator-bottom{margin-top:42px}
   .calculator-bottom h3{font-size:20px}

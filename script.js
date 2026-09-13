@@ -130,6 +130,13 @@ document.addEventListener("DOMContentLoaded", () => {
   const timelineRows = document.querySelectorAll(".timeline-row");
   const stageTabs = document.querySelectorAll(".stage-tab");
   const stageSwitcher = document.querySelector(".stage-switcher");
+  const timelineImages = {
+    architecture: "https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=700&q=80",
+    construction: "https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=700&q=80",
+    engineering: "https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=700&q=80",
+    interior: "https://images.unsplash.com/photo-1586023492125-27b2c045efd7?auto=format&fit=crop&w=700&q=80",
+    visualization: "https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=700&q=80"
+  };
   let previousScrollY = 0;
   let previousFocus = null;
 
@@ -234,6 +241,25 @@ document.addEventListener("DOMContentLoaded", () => {
     if (!title) return;
 
     const titleText = title.textContent.trim();
+    const titleWords = titleText.toLowerCase();
+    const imageType = titleWords.includes("interior") || titleWords.includes("visual")
+      ? "interior"
+      : titleWords.includes("construct") || titleWords.includes("supervision")
+        ? "construction"
+        : titleWords.includes("engineering") || titleWords.includes("bim")
+          ? "engineering"
+          : titleWords.includes("idea") || titleWords.includes("concept") || titleWords.includes("model")
+            ? "visualization"
+            : "architecture";
+    const timelineLine = row.querySelector(".timeline-line");
+    if (timelineLine) {
+      const image = document.createElement("img");
+      image.className = "timeline-image";
+      image.src = timelineImages[imageType];
+      image.alt = `${titleText} visual reference`;
+      image.loading = "lazy";
+      timelineLine.append(image);
+    }
     const toggle = document.createElement("button");
     toggle.className = "stage-detail-toggle";
     toggle.type = "button";
