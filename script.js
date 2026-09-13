@@ -128,6 +128,8 @@ document.addEventListener("DOMContentLoaded", () => {
   const costBriefTitle = document.getElementById("cost-brief-title");
   const costBriefText = document.getElementById("cost-brief-text");
   const timelineRows = document.querySelectorAll(".timeline-row");
+  const stageTabs = document.querySelectorAll(".stage-tab");
+  const stageSwitcher = document.querySelector(".stage-switcher");
   let previousScrollY = 0;
   let previousFocus = null;
 
@@ -277,6 +279,15 @@ document.addEventListener("DOMContentLoaded", () => {
       button.addEventListener("click", () => setCostStep(button.dataset.step));
     });
   }
+
+  stageTabs.forEach((tab) => {
+    tab.addEventListener("click", (event) => {
+      event.preventDefault();
+      const input = document.getElementById(tab.htmlFor);
+      if (input) input.checked = true;
+      stageSwitcher?.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
 
   if (hash && PROJECTS[hash]) fillProject(hash);
 
