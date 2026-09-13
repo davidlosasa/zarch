@@ -41,34 +41,34 @@
       </div>
 
       <div class="mosaic mosaic-7">
-        <a class="tile" href="projects.html#quzhou">
+        <button class="tile" type="button" data-project="quzhou">
           <img src="https://images.unsplash.com/photo-1487958449943-2429e8be8625?auto=format&fit=crop&w=900&q=80" alt="Concrete civic building at dusk">
           <span>Project 01</span>
-        </a>
-        <a class="tile" href="projects.html#atrium">
+        </button>
+        <button class="tile" type="button" data-project="atrium">
           <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80" alt="Curved glass courtyard">
           <span>Project 02</span>
-        </a>
-        <a class="tile" href="projects.html#tower">
+        </button>
+        <button class="tile" type="button" data-project="tower">
           <img src="https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?auto=format&fit=crop&w=1000&q=80" alt="Blue glass skyscraper">
           <span>Project 03</span>
-        </a>
-        <a class="tile" href="projects.html#lane">
+        </button>
+        <button class="tile" type="button" data-project="lane">
           <img src="https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80" alt="Street canyon looking upward">
           <span>Project 04</span>
-        </a>
-        <a class="tile" href="projects.html#facet">
+        </button>
+        <button class="tile" type="button" data-project="facet">
           <img src="https://images.unsplash.com/photo-1511818966892-d7d671e672a2?auto=format&fit=crop&w=1400&q=80" alt="Sharp glass corner">
           <span>Project 05</span>
-        </a>
-        <a class="tile" href="projects.html#arc">
+        </button>
+        <button class="tile" type="button" data-project="arc">
           <img src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?auto=format&fit=crop&w=1400&q=80" alt="Sweeping glazed facade">
           <span>Project 06</span>
-        </a>
-        <a class="tile" href="projects.html#brick">
+        </button>
+        <button class="tile" type="button" data-project="brick">
           <img src="https://images.unsplash.com/photo-1464146072230-91cabc968266?auto=format&fit=crop&w=900&q=80" alt="Brick residential facade">
           <span>Project 07</span>
-        </a>
+        </button>
       </div>
       <a class="center-link" href="projects.html">all work</a>
     </section>
@@ -106,18 +106,7 @@
       </div>
     </section>
 
-    <section class="world-map" aria-label="Studios around the world">
-      <p class="map-label">WE DESIGN<br>ALL OVER THE WORLD</p>
-      <div class="map-canvas" aria-hidden="true"></div>
-      <ul class="cities">
-        <li class="city city-ny">NEW YORK</li>
-        <li class="city city-paris">PARIS</li>
-        <li class="city city-lef">LEFKOSA</li>
-        <li class="city city-dubai">DUBAI</li>
-        <li class="city city-kin">KINSHASA</li>
-        <li class="city city-lubu">LUBUMBASHI</li>
-      </ul>
-    </section>
+    <section class="world-map" aria-label="Studios around the world"></section>
   </main>
 
   <footer class="site-footer" id="contact">
@@ -157,6 +146,33 @@
       </div>
     </div>
   </footer>
+
+  <div class="modal project-modal" id="project-modal" hidden>
+    <div class="modal-backdrop" data-close-modal></div>
+    <article class="project-card-detail" role="dialog" aria-modal="true" aria-labelledby="project-title">
+      <header class="card-top">
+        <p><span class="brand-mark tiny">ZA</span> <span data-project-kicker>Quzhou Sports Park</span></p>
+        <button class="text-link" type="button" data-close-modal>Close project</button>
+      </header>
+      <div class="project-detail-grid">
+        <div class="project-copy">
+          <h2 id="project-title">Quzhou Sports Park</h2>
+          <ul class="meta">
+            <li data-project-location>Quzhou, China</li>
+            <li data-project-type>Sports Infrastructure</li>
+            <li data-project-years>2018-2026</li>
+          </ul>
+          <div class="body" data-project-body></div>
+          <a class="read-more" href="projects.html">VIEW ALL PROJECTS</a>
+        </div>
+        <div class="project-gallery-wrap">
+          <div class="project-gallery" aria-label="Project gallery">
+            <img data-project-image alt="">
+          </div>
+        </div>
+      </div>
+    </article>
+  </div>
 
   <div class="modal start-modal" id="start-modal" hidden>
     <div class="modal-backdrop" data-close-modal></div>

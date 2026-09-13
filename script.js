@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const navToggle = document.querySelector(".nav-toggle");
   const nav = document.querySelector(".main-nav");
   const filters = document.querySelectorAll(".filter");
-  const tiles = document.querySelectorAll(".gallery .tile");
+  const tiles = document.querySelectorAll(".tile[data-project]");
   const projectModal = document.getElementById("project-modal");
   const startModal = document.getElementById("start-modal");
   const params = new URLSearchParams(window.location.search);
@@ -127,6 +127,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const costStepNumber = document.getElementById("cost-step-number");
   const costBriefTitle = document.getElementById("cost-brief-title");
   const costBriefText = document.getElementById("cost-brief-text");
+  const timelineRows = document.querySelectorAll(".timeline-row");
   let previousScrollY = 0;
   let previousFocus = null;
 
@@ -225,6 +226,36 @@ document.addEventListener("DOMContentLoaded", () => {
       navToggle.setAttribute("aria-expanded", String(open));
     });
   }
+
+  timelineRows.forEach((row) => {
+    const title = row.querySelector("h4");
+    if (!title) return;
+
+    const titleText = title.textContent.trim();
+    const toggle = document.createElement("button");
+    toggle.className = "stage-detail-toggle";
+    toggle.type = "button";
+    toggle.textContent = "+";
+    toggle.setAttribute("aria-expanded", "false");
+    toggle.setAttribute("aria-label", `Open ${titleText}`);
+    title.append(toggle);
+
+    const setExpanded = (expanded) => {
+      row.classList.toggle("is-open", expanded);
+      toggle.textContent = expanded ? "−" : "+";
+      toggle.setAttribute("aria-expanded", String(expanded));
+      toggle.setAttribute("aria-label", `${expanded ? "Close" : "Open"} ${titleText}`);
+    };
+
+    toggle.addEventListener("click", (event) => {
+      event.stopPropagation();
+      setExpanded(!row.classList.contains("is-open"));
+    });
+
+    row.addEventListener("click", () => {
+      setExpanded(!row.classList.contains("is-open"));
+    });
+  });
 
   if (filters.length) {
     const initial = params.get("category");
