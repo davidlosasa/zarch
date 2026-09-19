@@ -378,6 +378,10 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 .footer-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-left: 8%; }
 .footer-actions .btn:last-child,
 .footer-actions button { padding-inline: 28px; }
+.site-footer .footer-actions .btn,
+.site-footer .pills a { background: #fff; }
+.site-footer .footer-actions .btn:hover,
+.site-footer .pills a:hover { background: #d9d9d9; }
 .footer-links { display: grid; gap: 22px; }
 .footer-links h3 { font-size: 20px; margin-bottom: 12px; }
 .pills { display: flex; flex-wrap: wrap; gap: 10px; }
