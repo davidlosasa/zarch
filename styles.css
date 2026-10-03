@@ -401,14 +401,32 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
   padding: 48px var(--gutter) 80px;
 }
 .footer-light { background: var(--paper); }
-.footer-brand { background: var(--paper); padding: 8px 12px; border-radius: 8px; }
+.footer-brand { background: transparent; padding: 8px 12px; border-radius: 8px; }
 .footer-cta h2 { margin: 36px 0 48px 8%; font-size: 32px; line-height: 1.05; }
 .footer-cta h2 span { font-weight: 500; }
 .footer-actions { display: flex; flex-wrap: wrap; gap: 14px; margin-left: 8%; }
 .footer-actions .btn:last-child,
 .footer-actions button { padding-inline: 28px; }
+.site-footer .footer-actions > .btn {
+  box-sizing: border-box;
+  flex: 0 0 auto;
+  width: max-content;
+  min-width: 95px;
+  height: 31px;
+  padding: 0 12px;
+  border-radius: 8px;
+  white-space: nowrap;
+}
 .site-footer .footer-actions .btn,
 .site-footer .pills a { background: #fff; }
+.site-footer .pills a {
+  box-sizing: border-box;
+  width: 95px;
+  height: 31px;
+  flex: 0 0 95px;
+  padding: 0;
+  border-radius: 8px;
+}
 .site-footer .footer-actions .btn:hover,
 .site-footer .pills a:hover { background: #d9d9d9; }
 .footer-links { display: grid; gap: 22px; }
@@ -934,7 +952,7 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 .page-about > .site-footer {
   width: min(55vw, 973px);
   margin: 0 0 0 12.5%;
-  border-radius: 0 0 12px 12px;
+  border-radius: 0 0 8px 8px;
 }
 .about-lower {
   width: 100%;
@@ -1219,7 +1237,7 @@ body.modal-open .project-modal { isolation: isolate; }
   .about-hero { height: 70vw; }
   .page-about .about-hero { margin-inline: 16px; }
   .page-about .about-sheet { width: calc(100% - 32px); margin: 13vw 0 0 16px; border-radius: 20px 20px 0 0; }
-  .page-about > .site-footer { width: calc(100% - 32px); margin-left: 16px; border-radius: 0 0 12px 12px; }
+  .page-about > .site-footer { width: calc(100% - 32px); margin-left: 16px; border-radius: 0 0 8px 8px; }
   .about-lower { padding: 36px 16px 72px; }
   .about-lower-grid { grid-template-columns: 1fr; gap: 42px; padding-inline: 0; }
   .about-lower-copy,
