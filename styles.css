@@ -27,6 +27,7 @@ body {
   font-family: var(--font);
   font-size: 15px;
   line-height: 1.5;
+  overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
 button, input { font: inherit; color: inherit; }
@@ -250,12 +251,13 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 
 .statement {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: min(12vw, 180px);
+  grid-template-columns: 1fr;
+  gap: 20px;
+  width: 90%;
   padding: 56px 0;
   border-top: 1px solid var(--line);
-  border-bottom: 1px solid var(--line);
-  margin-top: 20px;
+  /* border-bottom: 1px solid var(--line); */
+  margin: 20px auto 0;
 }
 .statement h2 { font-size: 28px; line-height: 1.05; font-weight: 700; }
 .statement h2 span { font-weight: 500; }
@@ -1133,7 +1135,7 @@ body.modal-open .project-modal { isolation: isolate; }
   .mosaic-7 .tile:nth-child(6) { grid-column: 2; grid-row: 4; }
   .mosaic-7 .tile:nth-child(7) { display: none; }
   .field-grid { grid-template-columns: 1fr 1fr; }
-  .statement { gap: 40px; }
+  .statement { gap: 20px; }
   .cost-header { grid-template-columns: 140px 1fr 180px; }
   .cost-summary,
   .cost-brief,
@@ -1191,7 +1193,7 @@ body.modal-open .project-modal { isolation: isolate; }
   }
   .mosaic-7 .tile:nth-child(7) { display: block; }
   .statement { grid-template-columns: 1fr; padding: 36px 0; }
-  .statement p { justify-self: start; font-size: 16px; }
+  .statement p { justify-self: end; font-size: 16px; }
   .field-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .world-map { min-height: 380px; }
   .city { font-size: 10px; }
