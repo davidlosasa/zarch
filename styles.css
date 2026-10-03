@@ -121,6 +121,15 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 .wide-btn:hover,
 .hero-cta:hover { background: var(--pill-hover); }
 .main-nav .is-active { background: var(--pill-hover); }
+.main-nav a {
+  box-sizing: border-box;
+  width: 95px;
+  height: 31px;
+  flex: 0 0 95px;
+  padding: 0;
+  font-size: 12px;
+  border-radius: 8px;
+}
 .btn.dark { background: #2a2a2a; color: #fff; }
 .btn.dark:hover { background: #111; }
 
@@ -833,7 +842,6 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 .page-about .site-header .brand-text { font-size: clamp(15px, 1.2vw, 18px); }
 .page-about .site-header .main-nav { gap: clamp(8px, 0.8vw, 16px); }
 .page-about .site-header .main-nav a {
-  padding: 9px 16px;
   font-size: clamp(11px, 0.7vw, 13px);
 }
 .page-about .about-hero {
@@ -1121,7 +1129,6 @@ body.modal-open .project-modal { isolation: isolate; }
     flex-direction: column;
   }
   .main-nav.is-open { display: flex; }
-  .main-nav a { width: 100%; }
   .hero { margin-inline: 16px; }
   .featured, .fields { padding: 48px 0; }
   .mosaic-7 {
