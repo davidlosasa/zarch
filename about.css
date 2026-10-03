@@ -46,9 +46,16 @@ a {
   width: 100%;
   min-height: 88px;
   padding: 16px var(--gutter);
-  position: relative;
+  position: sticky;
+  top: 0;
   z-index: 30;
-  background: rgba(244, 244, 244, 0.96);
+  background:
+    radial-gradient(ellipse at 18% 15%, rgba(255, 255, 255, 0.82), transparent 48%),
+    radial-gradient(ellipse at 82% 85%, rgba(255, 255, 255, 0.55), transparent 52%),
+    linear-gradient(110deg, rgba(244, 244, 244, 0.8), rgba(255, 255, 255, 0.58));
+  backdrop-filter: blur(16px) saturate(135%);
+  -webkit-backdrop-filter: blur(16px) saturate(135%);
+  border-bottom: 1px solid rgba(17, 17, 17, 0.08);
 }
 
 .brand {
