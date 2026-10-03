@@ -261,7 +261,13 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 }
 .statement h2 { font-size: 28px; line-height: 1.05; font-weight: 700; }
 .statement h2 span { font-weight: 500; }
-.statement p { max-width: 420px; font-size: 18px; line-height: 1.35; justify-self: end; }
+.statement-title { font-size: clamp(18px, 1.75vw, 32px); }
+.statement p {
+  max-width: 420px;
+  font-size: clamp(14px, 1.25vw, 22px);
+  line-height: 1.35;
+  justify-self: end;
+}
 
 .fields { padding: 64px 0 80px; }
 .fields h2 { font-weight: 600; margin-bottom: 28px; }
@@ -1193,7 +1199,7 @@ body.modal-open .project-modal { isolation: isolate; }
   }
   .mosaic-7 .tile:nth-child(7) { display: block; }
   .statement { grid-template-columns: 1fr; padding: 36px 0; }
-  .statement p { justify-self: end; font-size: 16px; }
+  .statement p { justify-self: end; }
   .field-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
   .world-map { min-height: 380px; }
   .city { font-size: 10px; }
