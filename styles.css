@@ -373,10 +373,19 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 
 .world-map {
   position: relative;
-  min-height: 520px;
+  min-height: 100vh;
   background: url("images/bg_Arch_01.png") center / cover no-repeat;
   overflow: hidden;
 }
+
+.world-map div{
+  font-size: 30px;
+  position: absolute;
+}
+.world-map div span {
+  color: #5C85A1;
+}
+
 
 .site-footer {
   display: grid;
