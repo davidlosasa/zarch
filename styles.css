@@ -145,7 +145,8 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 
 .hero {
   margin: 0 var(--gutter);
-  height: min(58vw, 680px);
+  height: 90vh;
+  height: 90dvh;
   overflow: hidden;
 }
 .hero img {
@@ -1121,7 +1122,7 @@ body.modal-open .project-modal { isolation: isolate; }
   }
   .main-nav.is-open { display: flex; }
   .main-nav a { width: 100%; }
-  .hero { height: 72vw; margin-inline: 16px; }
+  .hero { margin-inline: 16px; }
   .featured, .fields { padding: 48px 0; }
   .mosaic-7 {
     grid-template-columns: 1fr;
