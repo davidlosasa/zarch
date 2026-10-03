@@ -381,7 +381,9 @@ h1, h2, h3, p, ul, ol, figure { margin: 0; }
 .world-map div{
   font-size: 30px;
   position: absolute;
+  color: #111;
 }
+
 .world-map div span {
   color: #5C85A1;
 }
